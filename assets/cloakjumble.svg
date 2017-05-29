@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="cloak1.svg"
+   inkscape:export-filename="/home/lionfish/Documents/Research/dp/demo_problem_with_standard_fn_noise.png"
+   inkscape:export-xdpi="128.25"
+   inkscape:export-ydpi="128.25">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path3943"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path3801"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3943-6"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3100"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3102"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.4,0.4)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="274.50758"
+     inkscape:cy="622.52828"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1311"
+     inkscape:window-height="744"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2987" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 341.60139,546.05554 -86.09909,0 0,-90.96809"
+       id="path2989"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1,1;stroke-dashoffset:0"
+       d="m 255.46266,546.10861 c 0,0 69.79624,-81.16609 87.31774,-83.41693"
+       id="path2984"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2988"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       transform="matrix(0.52435502,0,0,0.52435502,140.83677,231.08992)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2992"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565596"
+       inkscape:transform-center-y="0.073936599"
+       transform="matrix(0.52435502,0,0,0.52435502,189.97633,201.32754)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       id="g4095"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <g
+         id="g4079">
+        <g
+           transform="translate(23.110957,95.598639)"
+           id="g4087">
+          <path
+             transform="matrix(0.71503284,0,0,0.71503284,70.653024,197.29937)"
+             sodipodi:type="star"
+             style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="path2996"
+             sodipodi:sides="5"
+             sodipodi:cx="282.33765"
+             sodipodi:cy="503.84937"
+             sodipodi:r1="8.7189684"
+             sodipodi:r2="4.3594842"
+             sodipodi:arg1="1.8325957"
+             sodipodi:arg2="2.4609142"
+             inkscape:flatsided="false"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+             inkscape:transform-center-x="0.69733858"
+             inkscape:transform-center-y="0.14100926" />
+          <path
+             transform="matrix(0.71503284,0,0,0.71503284,34.899558,227.47041)"
+             sodipodi:type="arc"
+             style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="path2998"
+             sodipodi:cx="332.94644"
+             sodipodi:cy="478.88004"
+             sodipodi:rx="6.4285717"
+             sodipodi:ry="6.4285717"
+             d="m 339.37501,478.88004 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.5504,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.55041 2.87817,-6.42858 6.42857,-6.42858 3.5504,0 6.42857,2.87817 6.42857,6.42858 z" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3000"
+             y="561.17969"
+             x="282.64578"
+             style="font-size:11.44052505px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+             xml:space="preserve"><tspan
+               y="561.17969"
+               x="282.64578"
+               id="tspan3002"
+               sodipodi:role="line"
+               style="font-size:10px">Test Points</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-size:11.44052505px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+             x="282.64578"
+             y="573.65454"
+             id="text3004"
+             sodipodi:linespacing="100%"><tspan
+               sodipodi:role="line"
+               id="tspan3006"
+               x="282.64578"
+               y="573.65454"
+               style="font-size:10px">Training Points</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3016"
+       d="m 255.46266,546.10861 c 0,0 69.79624,-48.27322 87.31774,-50.52407"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073938639"
+       inkscape:transform-center-x="0.36565596"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path3020"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,189.97633,232.08388)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       sodipodi:ry="6.4285717"
+       sodipodi:rx="6.4285717"
+       sodipodi:cy="478.88004"
+       sodipodi:cx="332.94644"
+       id="path3022"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       transform="matrix(0.52435502,0,0,0.52435502,140.83677,256.81127)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       sodipodi:ry="6.4285717"
+       sodipodi:rx="6.4285717"
+       sodipodi:cy="478.88004"
+       sodipodi:cx="332.94644"
+       id="path2990"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       transform="matrix(0.52435502,0,0,0.52435502,85.039314,291.87652)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073944698"
+       inkscape:transform-center-x="0.36565381"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path2994"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,108.08034,282.07748)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       d="m 315.39799,505.07065 0,-15.18335"
+       id="path3024"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path3004"
+       d="m 470.71758,546.72126 -89.08885,0 0,-89.08885"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       id="g3796"
+       transform="matrix(1.1797988,0,0,1.1797988,121.00534,-218.67276)"
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3788"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3790"
+           sodipodi:role="line"
+           style="font-size:10.17122581px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3792"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3794"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       id="g3802"
+       transform="matrix(1.1797988,0,0,1.1797988,213.62701,-272.68133)"
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3804"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3806"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10.17122581px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3808"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3810"
+           x="107.18732"
+           y="647.54077">2</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.2,0,0,1.2,245.53477,-308.83756)"
+       id="g3812"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3814"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3816"
+           sodipodi:role="line"
+           style="font-size:10px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3818"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3820"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <g
+       id="g3822"
+       transform="matrix(1.2,0,0,1.2,337.39031,-233.38649)"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3824"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3826"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3828"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3830"
+           x="107.18732"
+           y="647.54077">1</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+       x="72.85714"
+       y="445.21933"
+       id="text3850"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3852"
+         x="72.85714"
+         y="445.21933" /></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;stroke:#000000;stroke-width:1.66417152000000002;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       id="path3856"
+       sodipodi:cx="494.19644"
+       sodipodi:cy="543.98047"
+       sodipodi:rx="0.61383927"
+       sodipodi:ry="0.61383927"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       transform="matrix(1.502249,0,0,1.502249,-316.68822,-313.89107)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       sodipodi:ry="0.61383927"
+       sodipodi:rx="0.61383927"
+       sodipodi:cy="543.98047"
+       sodipodi:cx="494.19644"
+       id="path3858"
+       style="fill:#000000;stroke:#000000;stroke-width:1.66417152000000002;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       sodipodi:type="arc"
+       transform="matrix(1.502249,0,0,1.502249,-316.68822,-327.78569)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 470.71758,641.00697 -89.08885,0 0,-89.08885"
+       id="path3953"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       id="g3955"
+       transform="matrix(1.2,0,0,1.2,245.53477,-214.55185)"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3957"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3959"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3961"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3963"
+           x="107.18732"
+           y="647.54077">2</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.2,0,0,1.2,337.39031,-139.10078)"
+       id="g3965"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3967"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3969"
+           sodipodi:role="line"
+           style="font-size:10px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3971"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3973"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <path
+       transform="matrix(0.61454199,-0.56853139,0.56853139,0.61454199,-212.12257,544.80038)"
+       d="m 579.82756,563.70087 a 63.387074,16.920055 0 1 1 -126.77414,0 63.387074,16.920055 0 1 1 126.77414,0 z"
+       sodipodi:ry="16.920055"
+       sodipodi:rx="63.387074"
+       sodipodi:cy="563.70087"
+       sodipodi:cx="516.44049"
+       id="path3975"
+       style="fill:none;stroke:#000000;stroke-width:1.4930871;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(1.502249,0,0,1.502249,-316.68822,-219.60535)"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       sodipodi:ry="0.61383927"
+       sodipodi:rx="0.61383927"
+       sodipodi:cy="543.98047"
+       sodipodi:cx="494.19644"
+       id="path3987"
+       style="fill:#000000;stroke:#000000;stroke-width:1.66417152000000002;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4011"
+       d="m 255.33993,616.55985 c 0,0 69.99246,-13.61703 87.56321,-14.25197"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4013"
+       d="m 341.60139,643.91268 -86.09909,0 0,-90.96809"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 255.46266,643.96575 c 0,0 69.79624,-48.27322 87.31774,-50.52407"
+       id="path4021"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,189.97633,329.94102)"
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4023"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565596"
+       inkscape:transform-center-y="0.073938639"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,140.83677,354.66841)"
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4025"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,85.039314,389.73366)"
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4027"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,108.08034,379.93462)"
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4029"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565381"
+       inkscape:transform-center-y="0.073944698"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(1.1797988,0,0,1.1797988,121.00534,-120.81562)"
+       id="g4033"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text4035"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4037"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10.17122581px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text4039"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4041"
+           x="107.18732"
+           y="647.54077">1</tspan></text>
+    </g>
+    <g
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(1.1797988,0,0,1.1797988,213.62701,-174.82419)"
+       id="g4043"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4045"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan4047"
+           sodipodi:role="line"
+           style="font-size:10.17122581px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4049"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan4051"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4057"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       transform="matrix(0.52435502,0,0,0.52435502,84.843148,363.96648)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       d="m 259.40437,637.94722 0,-15.18335"
+       id="path4059"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073943336"
+       inkscape:transform-center-x="0.36565381"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path4061"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,108.08034,352.40598)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073938639"
+       inkscape:transform-center-x="0.36565596"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path4067"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,189.97633,339.4112)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;stroke:#000000;stroke-width:1.66417152000000002;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       id="path4071"
+       sodipodi:cx="494.19644"
+       sodipodi:cy="543.98047"
+       sodipodi:rx="0.61383927"
+       sodipodi:ry="0.61383927"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       transform="matrix(1.502249,0,0,1.502249,-304.06131,-213.05966)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 354.03508,286.42382 -86.09909,0 0,-90.96809"
+       id="path2989-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       d="m 267.89635,286.47689 c 0,0 69.79624,-81.16609 87.31774,-83.41693"
+       id="path2984-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2988-3"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       transform="matrix(0.52435502,0,0,0.52435502,153.27046,-28.541803)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path2992-5"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565596"
+       inkscape:transform-center-y="0.073936599"
+       transform="matrix(0.52435502,0,0,0.52435502,202.41002,-58.304183)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       transform="translate(12.433687,-259.63172)"
+       id="g4095-6"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <g
+         id="g4079-2">
+        <g
+           transform="translate(23.110957,95.598639)"
+           id="g4087-9">
+          <path
+             transform="matrix(0.71503284,0,0,0.71503284,70.653024,197.29937)"
+             sodipodi:type="star"
+             style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="path2996-1"
+             sodipodi:sides="5"
+             sodipodi:cx="282.33765"
+             sodipodi:cy="503.84937"
+             sodipodi:r1="8.7189684"
+             sodipodi:r2="4.3594842"
+             sodipodi:arg1="1.8325957"
+             sodipodi:arg2="2.4609142"
+             inkscape:flatsided="false"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+             inkscape:transform-center-x="0.69733858"
+             inkscape:transform-center-y="0.14100926" />
+          <path
+             transform="matrix(0.71503284,0,0,0.71503284,34.899558,227.47041)"
+             sodipodi:type="arc"
+             style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="path2998-2"
+             sodipodi:cx="332.94644"
+             sodipodi:cy="478.88004"
+             sodipodi:rx="6.4285717"
+             sodipodi:ry="6.4285717"
+             d="m 339.37501,478.88004 c 0,3.5504 -2.87817,6.42857 -6.42857,6.42857 -3.5504,0 -6.42857,-2.87817 -6.42857,-6.42857 0,-3.55041 2.87817,-6.42858 6.42857,-6.42858 3.5504,0 6.42857,2.87817 6.42857,6.42858 z" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text3000-7"
+             y="561.17969"
+             x="282.64578"
+             style="font-size:11.44052505px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+             xml:space="preserve"><tspan
+               y="561.17969"
+               x="282.64578"
+               id="tspan3002-0"
+               sodipodi:role="line"
+               style="font-size:10px">Test Points</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-size:11.44052505px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+             x="282.64578"
+             y="573.65454"
+             id="text3004-9"
+             sodipodi:linespacing="100%"><tspan
+               sodipodi:role="line"
+               id="tspan3006-3"
+               x="282.64578"
+               y="573.65454"
+               style="font-size:10px">Training Points</tspan></text>
+        </g>
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3016-6"
+       d="m 267.89635,286.47689 c 0,0 69.79624,-48.27322 87.31774,-50.52407"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073938639"
+       inkscape:transform-center-x="0.36565596"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path3020-0"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,202.41002,-27.547843)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       sodipodi:ry="6.4285717"
+       sodipodi:rx="6.4285717"
+       sodipodi:cy="478.88004"
+       sodipodi:cx="332.94644"
+       id="path3022-6"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       transform="matrix(0.52435502,0,0,0.52435502,153.27046,-2.8204534)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       sodipodi:ry="6.4285717"
+       sodipodi:rx="6.4285717"
+       sodipodi:cy="478.88004"
+       sodipodi:cx="332.94644"
+       id="path2990-2"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       transform="matrix(0.52435502,0,0,0.52435502,97.472997,32.244797)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073944698"
+       inkscape:transform-center-x="0.36565381"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path2994-6"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,120.51403,22.445757)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       d="m 327.83168,245.43893 0,-15.18335"
+       id="path3024-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path3004-8"
+       d="m 483.15127,287.08954 -89.08885,0 0,-89.08885"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       id="g3796-7"
+       transform="matrix(1.1797988,0,0,1.1797988,133.43903,-478.30448)"
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3788-9"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3790-2"
+           sodipodi:role="line"
+           style="font-size:10.17122555px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3792-0"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3794-2"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       id="g3802-3"
+       transform="matrix(1.1797988,0,0,1.1797988,226.0607,-532.31305)"
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3804-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3806-5"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10.17122555px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3808-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3810-2"
+           x="107.18732"
+           y="647.54077">2</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.2,0,0,1.2,257.96846,-568.46928)"
+       id="g3812-2"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3814-8"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3816-9"
+           sodipodi:role="line"
+           style="font-size:10px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3818-7"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3820-3"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <g
+       id="g3822-6"
+       transform="matrix(1.2,0,0,1.2,349.824,-493.01821)"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3824-1"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3826-2"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3828-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3830-3"
+           x="107.18732"
+           y="647.54077">1</tspan></text>
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3856-4"
+       sodipodi:cx="494.19644"
+       sodipodi:cy="543.98047"
+       sodipodi:rx="0.61383927"
+       sodipodi:ry="0.61383927"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       transform="matrix(1.502249,0,0,1.502249,-304.25453,-573.52279)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       sodipodi:ry="0.61383927"
+       sodipodi:rx="0.61383927"
+       sodipodi:cy="543.98047"
+       sodipodi:cx="494.19644"
+       id="path3858-7"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       transform="matrix(1.502249,0,0,1.502249,-304.82275,-587.48055)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 483.15127,385.37525 -89.08885,0 0,-89.08885"
+       id="path3953-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       id="g3955-4"
+       transform="matrix(1.2,0,0,1.2,257.96846,-470.18357)"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text3957-5"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3959-0"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text3961-3"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3963-6"
+           x="107.18732"
+           y="647.54077">2</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.2,0,0,1.2,349.824,-394.7325)"
+       id="g3965-1"
+       style="stroke-width:0.83333331;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3967-0"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan3969-6"
+           sodipodi:role="line"
+           style="font-size:10px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3971-3"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan3973-2"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <path
+       transform="matrix(1.502249,0,0,1.502249,-304.25453,-475.23707)"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       sodipodi:ry="0.61383927"
+       sodipodi:rx="0.61383927"
+       sodipodi:cy="543.98047"
+       sodipodi:cx="494.19644"
+       id="path3987-6"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4011-1"
+       d="m 267.77362,356.92813 c 0,0 69.99246,-13.61703 87.56321,-14.25197"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 1;stroke-dashoffset:0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4013-5"
+       d="m 354.03508,384.28096 -86.09909,0 0,-90.96809"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 267.89635,384.33403 c 0,0 69.79624,-48.27322 87.31774,-50.52407"
+       id="path4021-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,202.41002,70.309297)"
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4023-4"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565596"
+       inkscape:transform-center-y="0.073938639"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,153.27046,95.036687)"
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4025-7"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,97.472997,130.10194)"
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4027-6"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(0.52435502,0,0,0.52435502,120.51403,120.3029)"
+       sodipodi:type="star"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4029-5"
+       sodipodi:sides="5"
+       sodipodi:cx="282.33765"
+       sodipodi:cy="503.84937"
+       sodipodi:r1="8.7189684"
+       sodipodi:r2="4.3594842"
+       sodipodi:arg1="1.8325957"
+       sodipodi:arg2="2.4609142"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:transform-center-x="0.36565381"
+       inkscape:transform-center-y="0.073944698"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <g
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(1.1797988,0,0,1.1797988,133.43903,-380.44734)"
+       id="g4033-6"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         xml:space="preserve"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="102.02541"
+         y="646.78595"
+         id="text4035-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4037-3"
+           x="102.02541"
+           y="646.78595"
+           style="font-size:10.17122555px">T</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         x="107.18732"
+         y="647.54077"
+         id="text4039-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4041-4"
+           x="107.18732"
+           y="647.54077">1</tspan></text>
+    </g>
+    <g
+       style="stroke-width:1.27140319;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(1.1797988,0,0,1.1797988,226.0607,-434.45591)"
+       id="g4043-5"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4045-2"
+         y="646.78595"
+         x="102.02541"
+         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="646.78595"
+           x="102.02541"
+           id="tspan4047-5"
+           sodipodi:role="line"
+           style="font-size:10.17122555px">T</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4049-4"
+         y="647.54077"
+         x="107.18732"
+         style="font-size:5.90039825px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL"
+         xml:space="preserve"><tspan
+           y="647.54077"
+           x="107.18732"
+           id="tspan4051-7"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <path
+       sodipodi:type="arc"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4057-4"
+       sodipodi:cx="332.94644"
+       sodipodi:cy="478.88004"
+       sodipodi:rx="6.4285717"
+       sodipodi:ry="6.4285717"
+       d="m 339.37501,478.88004 a 6.4285717,6.4285717 0 1 1 -12.85714,0 6.4285717,6.4285717 0 1 1 12.85714,0 z"
+       transform="matrix(0.52435502,0,0,0.52435502,97.276837,104.33476)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       d="m 271.83806,378.3155 0,-15.18335"
+       id="path4059-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073943336"
+       inkscape:transform-center-x="0.36565381"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path4061-3"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,120.51403,92.774257)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:transform-center-y="0.073938639"
+       inkscape:transform-center-x="0.36565596"
+       d="m 280.08101,512.27124 -1.13132,-5.67836 -5.31906,-2.2872 5.05085,-2.83066 0.53157,-5.76551 4.25291,3.92892 5.6476,-1.27609 -2.4224,5.25887 2.95883,4.97685 -5.75004,-0.67877 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.4609142"
+       sodipodi:arg1="1.8325957"
+       sodipodi:r2="4.3594842"
+       sodipodi:r1="8.7189684"
+       sodipodi:cy="503.84937"
+       sodipodi:cx="282.33765"
+       sodipodi:sides="5"
+       id="path4067-0"
+       style="fill:#dadadb;fill-opacity:1;stroke:#000000;stroke-width:1.90710485;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="star"
+       transform="matrix(0.52435502,0,0,0.52435502,202.41002,79.779477)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4071-8"
+       sodipodi:cx="494.19644"
+       sodipodi:cy="543.98047"
+       sodipodi:rx="0.61383927"
+       sodipodi:ry="0.61383927"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       transform="matrix(1.502249,0,0,1.502249,-291.62762,-468.69138)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3357"
+       d="m 440.38363,342.92631 7.06414,3.73849"
+       style="fill:none;stroke:#000000;stroke-width:0.52639258;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak1.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       inkscape:export-ydpi="274.70721"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak2.png"
+       style="fill:none;stroke:#000000;stroke-width:0.52639258;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+       d="M 437.97281,241.44253 437.69408,233.455"
+       id="path3359"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       transform="matrix(0.55136427,-0.51008377,0.51008377,0.55136427,-134.38725,195.8133)"
+       d="m 579.82756,563.70087 a 63.387074,16.920055 0 1 1 -126.77414,0 63.387074,16.920055 0 1 1 126.77414,0 z"
+       sodipodi:ry="16.920055"
+       sodipodi:rx="63.387074"
+       sodipodi:cy="563.70087"
+       sodipodi:cx="516.44049"
+       id="path3373"
+       style="fill:none;stroke:#000000;stroke-width:1.66417158;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1.66417158;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.66417152, 1.66417152;stroke-dashoffset:0"
+       id="path3375"
+       sodipodi:cx="516.44049"
+       sodipodi:cy="563.70087"
+       sodipodi:rx="63.387074"
+       sodipodi:ry="16.920055"
+       d="m 579.82756,563.70087 a 63.387074,16.920055 0 1 1 -126.77414,0 63.387074,16.920055 0 1 1 126.77414,0 z"
+       transform="matrix(0.55136427,-0.51008377,0.51008377,0.55136427,-134.38725,181.96611)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1.23344045;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path3381"
+       sodipodi:cx="424.26407"
+       sodipodi:cy="502.8392"
+       sodipodi:rx="11.364216"
+       sodipodi:ry="16.414978"
+       d="m 435.62828,502.8392 a 11.364216,16.414978 0 1 1 -22.72843,0 11.364216,16.414978 0 1 1 22.72843,0 z"
+       transform="matrix(0.87097241,-0.51811032,0.51811032,0.87097241,-204.54203,285.2008)"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(1.502249,0,0,1.502249,-303.99818,-307.25639)"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       sodipodi:ry="0.61383927"
+       sodipodi:rx="0.61383927"
+       sodipodi:cy="543.98047"
+       sodipodi:cx="494.19644"
+       id="path3379"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+    <path
+       transform="matrix(1.502249,0,0,1.502249,-316.68822,-233.52583)"
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.66417158;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path4177"
+       sodipodi:cx="494.19644"
+       sodipodi:cy="543.98047"
+       sodipodi:rx="0.61383927"
+       sodipodi:ry="0.61383927"
+       d="m 494.81028,543.98047 a 0.61383927,0.61383927 0 1 1 -1.22768,0 0.61383927,0.61383927 0 1 1 1.22768,0 z"
+       inkscape:export-filename="/home/lionfish/Documents/Research/dp/cloaking_talk/assets/cloak3.png"
+       inkscape:export-xdpi="274.70721"
+       inkscape:export-ydpi="274.70721" />
+  </g>
+</svg>
