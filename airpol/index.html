@@ -37,10 +37,10 @@
 	<body>
 
 		<div class="reveal">
-			<div class="slides" data-background="assets/pres_bg.png">
+			<div class="slides">
 
 
-				<section>
+				<section data-background="assets/pres_bg.jpg">
                     
 					<h3>Air Pollution: Kampala</h3>
 					<p>
@@ -48,11 +48,116 @@
                         <small>michaeltsmith.org.uk</small>
                         <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
                         <small>@mikethomassmith</small>
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br />
 					</p>
 				</section>
-
+				<section>
+                    
+					<h3>Why does it matter?</h3>
+					<p>
+					In 2012, 2.6 million people died due to outdoor air pollution (mostly heart disease or stroke).
+<br /><br />
+Summary: Air pollution is a big deal.
+<br /><br />
+<small>Note: We'll focus on PM2.5.</small>
+<br/>
+<br/>
+<small>Whiteboard</small>
+</p>
+<p><small>WHO press release 2014: http://www.who.int/mediacentre/news/releases/2014/air-pollution/en/</small></p>
+				</section>
+                <section>
+                    
+					<h3>How bad is it?</h3>
+					<p>
+					Only two papers about Kampala's air quality (Stephan Schwander's group), and a new sensor at the US embassy. <br />
+					<img src="assets/Global_pm10_cities_cropped.png" width=100%/><br/>
+					<br /><br/><small>(white board)</small></p>
+					<p>
+					</section>
+                <section>
+                    
+					<h3>Project development</h3>
+					<p>Began with trying the Shinyei sensor hooked up to a phone (2014).<br />
+					<img src="assets/IMG_5694.JPG" width="35%" />
+					<img src="assets/shinyei.png" width="50%" />					
+					</p>
+				</section>
+                <section>
+					<h3>Bodaboda deployment</h3>
+					<p>Engineer Bainomugisha new PI. Ssematimba Joel hardware dev.<br />
+					We recently switched to a better sensor from AlphaSense.
+					<br/>
+					<small>
+					<img src="assets/IMG_20170712_125154030.jpg" width="75%" style="margin:5px;" /><br/>
+					From left to right: Ssekanjako John, the bodaboda driver; me; Engineer Bainomugisha.</small>
+					</p>
+				</section>
+                <section>
+					<h3>Static site deployment</h3>
+					<img src="assets/IMG_20170712_153951028.jpg" width="90%" style="margin:5px;" />					
+				</section>
+                <section>
+					<h3>Static site deployment</h3>
+					<img src="assets/IMG_20170712_145249353.jpg" width="90%" style="margin:5px;" />					
+				</section>				
+                <section>
+                    
+					<h3>Project development</h3>
+					<img src="assets/IMG_20170712_125228295.jpg" width="30%" align="right" />
+					<p>unobtrusive hardware...				
+					</p>
+				</section>
+				<section>
+                    
+					<h3>Example data stream</h3>
+<iframe width="900" height="600" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/295702/charts/2?average=30&bgcolor=%23ffffff&color=%23d62020&dynamic=true&days=5&type=line&update=15&width=900&height=600"></iframe>
+</section>
+				
+				<section>
+				<h3>Combining Sensors</h3>
+				<p>Using a GP model, with inputs:
+				<ul>
+				<li>latitude, longitude and time
+				<li>time-of-day
+				<li>distance from large roads (data from OSM)
+				</ul>
+				<p>Multiple output GPs: Make each sensor type one output</p>
+				<br/>
+				<p>
+				<a href="https://lionfish0.github.io/air-quality-kampala/">website</a>
+				</p>
+				</section>
+				<section>
+				<h3>Future ideas</h3>
+				<ul>
+				<li>Tidy plans and provide the design to make into kit
+				<li>Use active learning to select location for bodaboda to visit
+				<li>Look at sources of pollution to try to start assigning causality
+				</ul>
+				</section>			
+				<section>
+				<h3>Thanks</h3>
+				<p>Funders: DIL Berkeley award.
+				<br/>
+				<img src="assets/funders.png" width=50%/>
+				<br/>
+				Engineer and Joel<br/>
+				<img src="assets/engineer.png" width=15%/>
+				<img src="assets/joel.png" width=15%/>								
+				</p>
+				</section>	
+				<section>
+				<h3>References</h3>
+<p align="left">				
+Schwander, Stephan, et al. "Ambient particulate matter air pollution in Mpererwe District, Kampala, Uganda: a pilot study." Journal of environmental and public health 2014 (2014).
+<br/><br/>
+Kirenga, Bruce J., et al. "The state of ambient air quality in Two Ugandan cities: a pilot cross-sectional spatial assessment." International journal of environmental research and public health 12.7 (2015): 8075-8091.
+</p>
+<br/>
+</section>
           </div>
-
+    </div>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 
@@ -65,6 +170,8 @@
 		progress: true,
 		history: true,
 		center: true,
+        width: '90%',
+        height: '100%',
 
         math: {
             mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
