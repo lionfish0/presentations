@@ -8,4 +8,4 @@ The short version <a href="https://lionfish0.github.io/presentations/dp4gp/small
 
 ## Air Pollution Kamapala
 
-Normal version <a href="https://lionfish0.github.io/presentations/airpol/#/">here</a>.	
+Normal version <a href="https://lionfish0.github.io/presentations/airpol/index.html">here</a>.	
