@@ -1,5 +1,11 @@
-# Link to site
+# Links to talks
 
-The page can be viewed <a href="https://lionfish0.github.io/cloaking_inducing_talk_short/#/">here</a>.	
+## DP for GP with inducing inputs
 
-The short version <a href="https://lionfish0.github.io/cloaking_inducing_talk_short/small.html#/">here</a>.
+Normal version <a href="https://lionfish0.github.io/presentations/dp4gp/#/">here</a>.	
+
+The short version <a href="https://lionfish0.github.io/presentations/dp4gp/small.html#/">here</a>.
+
+## Air Pollution Kamapala
+
+Normal version <a href="https://lionfish0.github.io/presentations/airpol/#/">here</a>.	
