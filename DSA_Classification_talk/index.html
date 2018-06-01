@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Classification</title>
+
+		<meta name="description" content="Intro to Classification">
+		<meta name="author" content="Mike Smith">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-background="assets/pres_bg.png">
+                <section data-background="assets/pres_bg.png">
+                </section>
+				<section data-background="assets/pres_bg.png">
+                    <h3>What is</h3>
+					<h1>Classification?</h1>
+					<p>
+						<small>Presented by Mike Smith</small><br/>
+                        <small><a href="mailto:mike@michaeltsmith.org.uk">mike@michaeltsmith.org.uk</a></small>
+					</p>
+				</section>
+
+
+				<section data-background="assets/pres_bg.png">
+					<h2>What is classification?</h2>
+					<p>
+						You have some training data. Each item consists of some values, and is of a <b>known class</b> (i.e. is labelled).
+					</p>
+					<p class="fragment">
+					    You want to classify new data that you don't know the class (label) of.
+					</p>
+					<p class="fragment">
+					    Because the data is labelled, this is an example of <b>supervised learning</b>.
+					</p>					
+                    <!-- <img src="assets/romans.jpg" width="50%" /> -->
+				</section>
+
+
+
+
+                <section data-background="assets/pres_bg.png">
+					<h2>Acute Malnutrition Screening</h2>
+					<p>
+                        <img src="assets/SAM.jpg" width="50%" align="right" style="margin:50px;" />
+                        Need to assess who needs treatment.</p><p>In-patient care provided to those with Severe Acute Malnutrition (SAM).</p><p>How to decide who has SAM?</p><br/>
+					</p>
+				</section>
+				
+				
+				
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Acute Malnutrition Screening</h2>
+					<p>
+                        Most common methods:</p><p style="align:left;"><ul><li>Mid-upper arm circumference</li><li>Weight-for-height z-score</li></ul></p><br/>
+					</p>
+				</section>
+				
+				
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Acute Malnutrition Screening</h2>
+					<p>
+                        <img src="assets/cht_wfh_girls_z_2_5.png" width="100%" align="center" style="margin:0px; border-style:none; background:none;" />
+				</section>			
+				
+			
+
+
+
+
+                <section data-background="assets/pres_bg.png">
+					<h2>Acute Malnutrition Screening</h2>
+					<p>
+                        <img src="assets/paper.png" width="50%" align="right" style="margin:0px; border-style:none; background:none; box-shadow: none;" />
+                        Which is best?</p><p>Researchers looked at outcomes of children presenting with different MUACs and z-scores.</p><p>Aim: Classify, based on MUAC, whether a child will recover without intervention.</p><p align="left" style="font-size:12px;">e.g. Laillou, Arnaud, et al. "Optimal screening of children with acute malnutrition requires a change in current WHO guidelines as MUAC and WHZ identify different patient groups." PloS one 9.7 (2014): e101159.</small></p><br/>
+					</p>
+				</section>
+				
+				
+
+
+
+               <section data-background="assets/pres_bg.png">
+					<h2>MUAC (simulated) Dataset</h2>
+					<p>
+                        <img src="assets/classify1.png" align="center" style="margin:0px;" width="70%" /><br />
+                        <b>SIMULATED</b> data from 29 children who recovered without treatment and 19 who didn't</p>
+					</p>
+				</section>
+
+
+
+               <section data-background="assets/pres_bg.png">
+					<h2>MUAC (simulated) Dataset</h2>
+					<p>
+                        <img src="assets/classify2.png" align="left" style="margin:10px;" width="45%" /></p>
+                        <p class="fragment"><img src="assets/roc1.png" align="right" style="margin:10px;" width="45%" /></p>
+                        <p><br clear="both"/>
+                        Where should we put the threshold to decide who to treat?</p>
+					</p>
+				</section>
+
+               <section data-background="assets/pres_bg.png">
+					<h2>MUAC (simulated) Dataset</h2>
+					<p>
+                        <img src="assets/classify3.png" align="left" style="margin:10px;" width="45%" /></p>
+                        <p class="fragment"><img src="assets/roc2.png" align="right" style="margin:10px;" width="45%" /></p>
+                        <p><br clear="both"/>
+                        Is this a better threshold?</p>
+					</p>
+				</section>
+
+               <section data-background="assets/pres_bg.png">
+					<h2>MUAC (simulated) Dataset</h2>
+					<p>
+                        <img src="assets/classify4.png" align="left" style="margin:10px;" width="45%" /></p>
+                        <p class="fragment"><img src="assets/roc3.png" align="right" style="margin:10px;" width="45%" /></p>
+                        <p><br clear="both"/>
+                        What about in the middle?</p>
+					</p>
+			   </section>
+				
+               <section data-background="assets/pres_bg.png">
+					<h2>MUAC (simulated) Dataset</h2>
+                        <p align="left"><img src="assets/roc4.png" align="right" style="margin:10px;" width="45%" />We can keep plotting points on this graph, to generate a curve. This is called the "Receiver operating characteristic" (ROC) curve.</p>
+					</p><p align="left" class="fragment">We sometimes use this to compare classifiers - area under the curve.</p><p class="fragment" align="left"><b>Cost Matrix</b>: What is the cost of a <b>False Positive</b> compared to the cost of a <b>False Negative?</b></p>
+				</section>
+						
+                <section data-background="assets/pres_bg.png">
+					<h2>More data?</h2>
+				</section>
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Use z-score instead?</h2>
+                    <p>We might be able to do better with our screening if we use the z-score data?</p>
+                    <p class="fragment"><img src="assets/zscore.png" align="center" style="margin:10px;" height="40%" /></p>
+				</section>
+							
+               <section data-background="assets/pres_bg.png">
+					<h2>more data?</h2>
+                    <p>We might be able to do better with our screening if we combine the MUAC data with the z-score data</p>
+                    <p class="fragment"><img src="assets/both.png" align="center" style="margin:10px;" height="40%" /></p>
+                    <p class="fragment">Which class do people think the ? child belongs in?</p>
+				</section>
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Nearest Neighbour</h2>
+                    <p><img src="assets/both.png" align="right" style="margin:10px;" height="40%" />We could assign the class of the child's "nearest neighbour".</p>
+				</section>
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>k-Nearest Neighbour</h2>
+                    <p><img src="assets/both.png" align="right" style="margin:10px;" height="40%" />We could look at the class of the three nearest neighbours and pick the most common class.</p>
+				</section>
+				
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Linear Boundary</h2>
+                    <p><img src="assets/linear.png" align="right" style="margin:10px;" height="40%" />We could draw a straight line to try to classify the children?</p>
+				</section>	
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Other classifiers</h2>
+                    <p><img src="assets/plot_classifier_comparison_001.png" align="center" style="margin:10px;" />Many other types of classifier... (some are good for when there's more dimensions, or when inputs are correlated, or if there's more or less noise...)</p>
+				</section>	
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Leave-one-out cross-validation</h2>
+                    <p><img src="assets/random.png" align="left" style="margin:10px;" />If we imagine our data is more random (like this). Could we still classify the children?</p>
+				</section>	
+							
+				<section data-background="assets/pres_bg.png">
+					<h2>Leave-one-out cross-validation</h2>
+                    <p><img src="assets/random2.png" align="left" style="margin:10px;" />We could draw a complicated decision boundary (like this).</p><p class="fragment">All <b>training points</b> are classified correctly, but...</p><p class="fragment">...what about a new child?</p>
+				</section>	
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Leave-one-out cross-validation</h2>
+                    <p>To test our classifier we need to divide the data up into <b>TRAINING</b> data and <b>TEST</b> data.</p><p class="fragment">We normally do this by leaving out one item at a time.</p>
+				</section>					
+				
+				<section data-background="assets/pres_bg.png">
+					<h2>Leave-one-out cross-validation</h2>
+                    <p><img src="assets/leftout.png" align="left" style="margin:10px;" />Here we've left out one of the children from the training data. We can now TEST to see if the classifier got it correct. In this case it didn't.</p>
+				</section>
+							
+				<section data-background="assets/pres_bg.png">
+					<h2>Leave-one-out cross-validation</h2>
+                    <p>Leave-one-out cross-validation allows us to say how well our classifier will <b>generalise</b> to unknown data.</p>
+                    <p class="fragment"><img src="assets/twins.png" align="left" style="margin:10px;" />Warning note: When leaving 'one' out, you need to be careful to think about other correlated data. For example if each child had a twin, you might want to leave both twins out for the cross-validation.</p>
+				</section>
+										
+				<section data-background="assets/pres_bg.png">
+					<h2>Over-fitting</h2>
+                    <p><img src="assets/random2.png" align="left" style="margin:10px;" />This decision boundary is an example of over-fitting.</p><p>Our 'model' is overly complicated and describes the noise, rather than the underlying structure.</p>
+				</section>	
+								
+			    <section data-background="assets/pres_bg.png">
+					<h2>Validation</h2>
+                    <p>There might be many parameters we can adjust in our model (something you'll see shortly). For example the number of neighbours, or the curviness of our decision boundary.</p><p class="fragment">We could keep fiddling with these parameters (this could even be done automatically) until we get a good result on our training set...</p><p class="fragment">...does that seem 'honest'?</p>
+				</section>
+
+				<section data-background="assets/pres_bg.png">
+					<h2>Validation</h2>
+                    <p>Once you've finished adjusting the model (using the training and test sets), use a <b>validation</b> dataset, that you'd not used yet for anything else.</p>
+                    <img src="assets/traintestvalidate.png" align="center" style="margin:30px; border-style:none; background:none; box-shadow: none;" />
+				</section>
+												
+
+				<section data-background="assets/pres_bg_bb_white.jpg">
+					<h2>Logistic Regression</h2>
+                    <p>A quick mention of how classification can often be considered a regression problem...</p>
+				</section>				
+				
+				
+				<section data-background="assets/pres_bg_bb_white.jpg">
+					<h2>Logistic Regression</h2>
+					<img src="assets/zscore.png" align="center" style="margin:30px; border-style:none; background:none; box-shadow: none;" />
+                    <p>Earlier we tried to find a decision boundary to separate out these two classes.</p>
+				</section>				
+				
+				<section data-background="assets/pres_bg_bb_white.jpg">
+					<h2>Logistic Regression</h2>
+					<img src="assets/logistic.png" align="center" style="margin:30px; border-style:none; background:none; box-shadow: none;" />
+                    <p>But if we treat the y-axis as a number, could we instead fit a line?</p>
+				</section>						
+				
+				<section data-background="assets/pres_bg_bb_white.jpg">
+					<h2>Logistic Regression</h2>
+					<img src="assets/logistic.png" align="center" style="margin:30px; border-style:none; background:none; box-shadow: none;" width="30%" />
+                    <p>Logistic Regression does exactly that, and fits this function to the data:</p>
+                    <p>$Logistic(z) = \frac{1}{1 + e^{-z}}$</p>
+				</section>						
+				
+				
+				<section data-background="assets/pres_bg_bb_white.jpg">
+					<h2>Logistic Regression</h2>
+                    <p>For classification we just assign a threshold to that function.</p>
+                    <p>We replace $z$ with $w^\top x$. This might look familiar from Neil's lecture on regression.</p>
+                    <p>$Logistic(z) = \frac{1}{1 + e^{-\mathbf{w}^\top\mathbf{x}}}$</p>
+                    <p>We basically have a couple of parameters in $w$ which we adjust to make the curve fit our data as well as possible.</p>
+				</section>						
+				
+				<section data-background="assets/pres_bg.png">
+				<h2>Questions</h2>
+				</section>
+				<section data-background="assets/pres_bg.png">
+					<h2>Terminology</h2>
+                    <p>True Positive = Sensitivity</p>
+                    <p>False Positive = Type I error</p>
+                    <p>True Negative = Specificity</p>
+                    <p>False Negative = Type II error</p>
+				</section>
+				
+				
+				
+				
+				
+
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+        math: {
+            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/math/math.js', async: true }
+		]
+	});
+
+</script>
+
+</body>
+</html>

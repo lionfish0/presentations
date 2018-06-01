@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Is Your Research Software Correct?</title>
+
+		<meta name="description" content="Is Your Research Software Correct?">
+		<meta name="author" content="Michael Croucher">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Is Your Research Software Correct?</h2>
+                    <p>I'm Mike Smith! But this is an abridged talk written by Mike Croucher. </p>
+
+                        <a href="http://www.walkingrandomly.com">www.walkingrandomly.com</a>
+					</p>
+				</section>
+				<section>
+					<h2>Imagine...</h2>
+					<h2 class="fragment fade-in">Your results are amazing!</h2>
+					<h2 class="fragment fade-in">but wrong</h2>
+				</section>
+
+				<section>
+			 <section data-background="Worms1.png" data-background-size="contain">	</section>
+				<section>
+					<ul>
+					<p>This 2003 trial, done in Kenya, found that deworming whole schools improved children’s health, school performance, and school attendance.</p>
+					<p class="fragment fade-in">In 2013, the data was reanalysed independently using new computer programs</p>
+					<p class="fragment fade-in">Many mistakes found.</p>
+				</ul>
+				</section>
+
+				<section data-background="Worms2.png" data-background-size="contain">	</section>
+
+				</section>
+
+
+				<section>
+					<h2>We have a problem!</h2>
+					<img src="problem.gif" width="600" height="512">
+				</section>
+
+				<section>
+					<h1>Croucher's law</h1>
+					<h2 class="fragment fade-in">I can be an idiot and WILL make mistakes.</h2>
+					<h2 class="fragment fade-in">You are no different!</2>
+				</section>
+
+
+				<section>
+					<h1>Your Analysis?</h1>
+					<h3 class="fragment fade-in">What you did</h3>
+					<p class="fragment fade-in">Open package foo. Click, Click, drag, Click, Click, Click, Right-Click, Save, 'results.csv'.</p>
+					<p class="fragment fade-in">Load into Excel. Click, drag, generate graph, right click, save, 'pretty-graph.png'</p>
+				</section>
+				<section>
+					<h1>Your Analysis?</h1>
+					<h3>What you said</h3>
+					<p> I analysed my data in foo using the bar analysis. Here's a graph of the results.<p>
+				</section>
+				<section>
+					<h1>How reproducible is a mouse click?</h1>
+				</section>
+				<section>
+      
+				<h1>Automate</h1>
+				<p class="fragment fade-in">aka 'learn to program'</br>
+				<b>You are already ahead of most researchers!</b></p>
+			</section>
+			<section>
+        <p><font size="36">The Ideal</font></p>
+				<p class="fragment fade-in"><font size="36">Results = TheAnalysis(MyData)</font></p>
+				<img src="domino_success.gif" class="fragment fade-in">
+			</section>
+			<section>
+        <p><font size="36">Reality</font></p>
+				<img src="domino_one.gif" class="fragment fade-in">
+			</section>
+		
+
+		<section>
+			<h2>Problem</h2>
+				<h3>I am an idiot and will make mistakes</h3>
+
+			<p>(Partial) Solutions
+				<ul>
+					<li>Automate (aka learn to program)
+				</ul>
+		</section>
+
+
+			<section>
+			  <h3>Write code in a (very) high-level language</h3>
+			  <ul>
+			  <li>Python, MATLAB, R, Mathematica, Julia, etc
+			  <li>Fewer mistakes, faster to code.</li>
+              <li> Computer time is cheap. Programmer time is expensive.
+              <li> Ensure it's correct, then worry about speed.
+              </ul>
+			</section>  
+
+		<section>
+			<h2>Problem</h2>
+				<h3>I am an idiot and will make mistakes</h3>
+
+			<p>(Partial) Solutions
+				<ul>
+					<li>Automate (aka learn to program)
+					<li>Write code in a (very) high-level language
+				</ul>
+		</section>
+    
+			<section>
+			  Two facts that, combined, worry me:
+				<p class="fragment fade-in"> Scientists typically spend 30% or more of their time developing software</p>
+				<p class="fragment fade-in"> 90% or more of them are primarily self-taught</p>
+				<p class="fragment fade-in"
+				<p class="fragment fade-in"> <small>Hannay JE, Langtangen HP, MacLeod C, Pfahl D, Singer J, et al.. (2009) How do scientists develop and use scientific software? In: Proceedings Second International Workshop on Software Engineering for Computational Science and Engineering. pp. 1–8. doi:10.1109/SECSE.2009.5069155.</small></p>
+        <p class="fragment fade-in"><small>
+					Prabhu P, Jablin TB, Raman A, Zhang Y, Huang J, et al.. (2011) A survey of the practice of computational science. In: Proceedings 24th ACM/IEEE Conference on High Performance Computing, Networking, Storage and Analysis. pp. 19:1–19:12. doi:10.1145/2063348.2063374.</small></p>
+			</section>
+			<section>
+				<h2>Get some training</h2>
+				<img src="SC.png">
+				<img src="DC.png">
+				<p class="fragment fade=in">Just enough Software Engineering to Perform</p>
+			</section>
+
+
+		<section>
+			<h2>Problem</h2>
+				<h3>I am an idiot and will make mistakes</h3>
+
+			<p>(Partial) Solutions
+				<ul>
+					<li>Automate (aka learn to program)
+					<li>Write code in a (very) high-level language
+					<li>Get some training
+				</ul>
+		</section>
+
+
+		<section>
+			<h2>Use version control</h2>
+		</section>
+		<section>
+			<h1>Is this familiar?</h1>
+			<ul>
+			<li> code_ver1.m
+			<li> code_ver1b_BROKEN.m
+			<li> code_ver1b_BROKEN_Working_march20.m
+			<li> code_ver1b_BROKEN_Working_march20_Bobs_mods_ForMike.m
+			</ul>
+		</section>
+		<section>
+			<h2>Which version did the results come from?</h2>
+		</section>
+		<section>
+			<h2>What broke the code?</h2>
+		</section>
+		<section>
+			<h2>Team co-ordination</h2>
+		</section>
+		<section>
+			<h2>Taking you back to your happy place</h2>
+		</section>
+	<section>
+		<h2>True Story </h2>
+		<ul>
+			<li class="fragment fade=in"> Me: Can I see the code please?
+			<li class="fragment fade=in"> Them: I'll just get the changes from Bob folded in and email it
+			<li class="fragment fade=in"> Me: Shouldn't we be using version control?
+			<li class="fragment fade=in"> Them: No need - it's overkill. We don't have a VC problem.
+			<li class="fragment fade=in"> Me: The code you sent me doesn't work
+			<li class="fragment fade=in"> Them: Sorry. I sent the wrong version.
+		</ul>
+	</section>
+
+	<section>
+		<h2>Which version control system should you use?</h2>
+		<p class="fragment fade=in">I like and use 'git' but use whatever your colleagues are using.</p>
+	</section>
+		<section>
+		<h2>The version control life cycle</h2>
+			<ol>
+			<li> git? No thanks, I'm scared!
+			<li> well this is handy.
+			<li> we're not using git? I'm scared!
+			</ol>
+					<p>source: <a href="https://twitter.com/bobearth/status/571154995506122755">https://twitter.com/bobearth/status/571154995506122755</a> </p>
+</section>
+
+
+	<section>
+		<h2>Problem</h2>
+			<h3>I am an idiot and will make mistakes</h3>
+
+		<p>(Partial) Solutions
+			<ul>
+				<li>Automate (aka learn to program)
+				<li>Write code in a (very) high-level language
+				<li>Get some training
+				<li>Use version control
+			</ul>
+	</section>
+
+	<section>
+		<h2>Get a code buddy</h2>
+		<p class="fragment fade-in"> Doesn't have to understand your research</p>
+		<p class="fragment fade-in"> Remit: Tell me where I could do better?</p>
+		<p class="fragment fade-in"> Problem 1: Get the code running on THEIR machine</p>
+	</section>
+	<section>
+		<h2>Get a code buddy</h2>
+		<img class="fragment fade-in" src="wtfm.jpg">
+	</section>
+
+
+<section>
+	<h2>Problem</h2>
+		<h3>I am an idiot and will make mistakes</h3>
+
+	<p>(Partial) Solutions
+		<ul>
+			<li>Automate (aka learn to program)
+			<li>Write code in a (very) high-level language
+			<li>Get some training
+			<li>Use version control
+			<li>Get a code buddy
+		</ul>
+</section>
+
+    
+			<section>
+				<h2>Share your code and data openly</h2>
+				<p class="fragment fade-in"><img src="panda.gif" width="315" height="350"></p>
+			</section>
+			<section>
+				<h2>You've come so far...</h2>
+				<ul>
+					<li class="fragment fade-in"> You can get your results by entering one command
+					<li class="fragment fade-in"> Your code buddy has seen your code -> Show it to the world
+					<li class="fragment fade-in"> Your code is in git -> upload to public github
+				</ul>
+			</section>
+			<section>
+				<h2>Benefits</h2>
+				<ul>
+					 <li class="fragment fade-in"> It's the right thing to do
+					<li class="fragment fade-in"> Others will use, debug and enhance your work
+					<li class="fragment fade-in"> Others will reproduce and cite your work
+					<li class="fragment fade-in"> More opportunities to collaborate
+			    </ul>
+			
+			<p class="fragment fade-in"> If python: write it as a module - future you will be grateful</p>
+				
+			</section>
+
+		<section>
+			<h2>Literate computing</h2>
+			<p>Makes it easy for people to use your module.</p>
+			<p>Use jupyter, mathematica, rstudio, matlab live, etc</p>
+		</section>
+
+		<section>
+			<h2>Problem</h2>
+				<h3>I am an idiot and will make mistakes</h3>
+
+			<p>(Partial) Solutions
+				<ul>
+					<li>Automate (aka learn to program)
+					<li>Write code in a (very) high-level language
+					<li>Get some training
+					<li>Use version control
+					<li>Get a code buddy
+					<li>Share your code and data openly
+					<li>Use literate computing technologies</li>
+				</ul>
+		</section>
+
+			<section>
+			  <h2>Afraid to change your code?</h2>
+				<img src="domino_fail.gif" class="fragment fade-in">
+			</section>
+
+
+				<section>
+					<h2>Write tests</h2>
+					<ul>
+						<li>Every decent language has a testing framework
+						<li>Learn how to use it (software carpentry)
+						<li>You write additional code that ensures your code gives the answers you expect
+						<li>Tests give you confidence to make changes
+					</ul>
+				</section>
+				<section>
+
+<pre><code>
+$ nosetests ./unittests.py
+..............................
+----------------------------------------------------------------------
+Ran 30 tests in 0.152s
+
+OK
+</code></pre>
+</section>
+
+			<section data-background="jdcook_tweet.png" data-background-size="contain">
+			</section>
+
+
+<section>
+		<h2>Problem</h2>
+			<h3>I am an idiot and will make mistakes</h3>
+
+		<p>(Partial) Solutions
+			<ul>
+				<li>Automate (aka learn to program)
+				<li>Write code in a (very) high-level language
+				<li>Get some training
+				<li>Use version control
+				<li>Get a code buddy
+				<li>Share your code and data openly
+				<li>Use literate computing technologies</li>
+				<li>Write tests
+			</ul>
+	</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: false,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Parallax background image
+                backgroundTransition: 'slide',
+
+             dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+
+        // Speaker notes
+        { src: 'plugin/notes/notes.js', async: true },
+
+        // MathJax
+        { src: 'plugin/math/math.js', async: true }
+    ]
+
+			});
+
+		</script>
+
+	</body>
+</html>
