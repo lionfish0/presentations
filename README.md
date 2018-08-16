@@ -6,7 +6,7 @@ Normal version <a href="https://lionfish0.github.io/presentations/dp4gp/#/">here
 
 The short version <a href="https://lionfish0.github.io/presentations/dp4gp/small.html#/">here</a>.
 
-## Air Pollution Kamapala
+## Air Pollution Kampala
 
 2017 version <a href="https://lionfish0.github.io/presentations/airpol/index.html">here</a>.	
 
