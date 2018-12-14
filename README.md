@@ -6,6 +6,8 @@ Normal version <a href="https://lionfish0.github.io/presentations/dp4gp/#/">here
 
 The short version <a href="https://lionfish0.github.io/presentations/dp4gp/small.html#/">here</a>.
 
+With classification etc <a href="https://lionfish0.github.io/presentations/dp4gp2">here</a>.
+
 ## Air Pollution Kamapala
 
 2017 version <a href="https://lionfish0.github.io/presentations/airpol/index.html">here</a>.	
