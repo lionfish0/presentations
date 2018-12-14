@@ -1,0 +1,26 @@
+- not particularly smart - basically tells the GP to partially (or completely) ignore outliers.
+- result is that the sensitivity of the output predictions to these outliers is substantially reduced, ironically giving better estimates.
+- depends on the data - our outliers are much like the rest of the data, so ignoring them doesn't matter.
+
+- DP becomes increasingly challenging as the dimensionality of the data increases.
+
+- If actual data lies on low-dim manifold then inducing inputs might be a way of coping in these higher dimensions.
+[show 2d plot?]
+
+- Results: [preliminary]
+
+For the 2d !kung example (inputs age and weight, output height)
+
+1d
+From one 10-fold cross validation run, 4 IV
+Normal:   14.95 +/- 2.04*
+Inducing: 11.07 +/- 0.75
+
+*normal has high uncertainty depending on a) if an outlier is being predicted and b) how well/badly the random sample that's provided is.
+
+2d
+From one 10-fold cross validation run, 5 IV
+Normal:   22.75 +/- 1.93
+Inducing: 8.83 +/- 0.58
+
+

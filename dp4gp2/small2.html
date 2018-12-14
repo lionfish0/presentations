@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Differentially Private Gaussian Processes</title>
+
+		<meta name="description" content="Differentially Private Gaussian Processes">
+		<meta name="author" content="Mike Smith">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-background="assets/pres_bg.png">
+
+
+			
+			
+				<section data-background="assets/pres_bg.png">
+                    
+					<h3>Differentially Private<br/> Gaussian Processes</h3>
+					<p>
+						<small>Presented by Mike Smith, University of Sheffield</small><br/>
+                        <small>michaeltsmith.org.uk</small>
+                        <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
+                        <small>@mikethomassmith</small>
+					</p>
+				</section>
+				
+<section data-background="assets/pres_bg_bb.png" data-markdown>
+<script type="text/template">
+<h2>Differential Privacy</h2>
+<p>A randomised algorithm $M$ is $\varepsilon$-differentially private if a given output is almost as likely in one database as in another neighbouring database.</p>
+<img src="assets/dp_graph.png" width=45%></p>
+</script>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+	<h2 style="color:black;">Differential Privacy for Gaussian Processes</h2>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+	<h3 style="color:black;">Differential Privacy for GPs</h3>
+	<p>We have a dataset in which the inputs, $X$, are <b>public</b>. The outputs, $\mathbf{y}$, we want to keep <b>private</b>.</p>
+    <img src="assets/kung_pseudo_pert.png" width="75%" style="margin:0px; border:none;" />
+    <p style="font-size:small;"><b>Data consists of the heights and weights of 287 women from a census of the !Kung</b></p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+	<h3 style="color:black;">Vectors and Functions</h3>
+	<p>Hall et al. (2013) make a function private by adding a <b>scaled</b> sample from its <b>GP prior</b>.</p>
+<img src="assets/hall1.png" width="60%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+	<p>We show that (for many common kernels) the scale is<br/> $d\;||K^{-1}||_\infty$</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Applied to Gaussian Processes</h3>
+    <p>This 'works' in that it allows DP predictions...but to avoid too much noise, the value of $\varepsilon$ is too large (here it is 100)</p>
+    <img src="assets/kung_standard_simple.png" width="70%" style="margin:0px; border:none;" />
+    <p><small>EQ kernel, $l = 25$ years, $\Delta=100$cm</small></p>
+</section>
+ 
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Cloaking</h3>
+    <p>So far we've made the whole posterior mean function private...</p>
+    <p>...what if we just concentrate on making particular predictions private?</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Effect of perturbation</h3>
+    <p>Previously I mentioned that the noise is sampled from the GP's <b>prior</b>.</p>
+    <p>This is not necessarily the most 'efficient' covariance to use.</p>
+    <img src="assets/cloak1.png" width="75%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Effect of perturbation</h3>
+    <img src="assets/cloak2.png" width="75%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Cloaking</h3>
+    <p>Left: Ideal covariance. Right: actual covariance</p>
+    <img src="assets/cloak3.png" width="75%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">DP Vectors</h3>
+    <p>Hall et al. (2013) also show how to add noise to a vector</p>
+    <p>$\frac{\text{c}(\delta)\Delta}{\varepsilon} \mathcal{N}_d(0,M)$</p>
+    <p>where</p>
+    <p>$\sup_{D \sim {D'}} ||M^{-1/2} (\mathbf{y}_* - \mathbf{y}_{*}')||_2 \leq \Delta$</p>
+    <p>We get to pick $M$</p>
+    <p>$M = \sum_i{\lambda_i \mathbf{c}_i \mathbf{c}_i^\top}$</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Cloaking: Results</h3>
+    <p>The noise added by this method is now practical.</p>
+    <img src="assets/kung_cloaking_simple.png" width="100%" style="margin:0px; border:none;" />
+    <p><small>EQ kernel, $l = 25$ years, $\Delta=100$cm, $\varepsilon=1$</small></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <p>House prices around London</p>
+    <img src="assets/houseprices_bigcirc_15km_0_labels.png" width="60%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Citibike</h3>
+    <p>Tested on 4d citibike dataset (predicting journey durations from start/finish station locations).
+    <p>The method appears to achieve lower noise than binning alternatives (for reasonable $\varepsilon$).</p>
+    <img src="assets/newtable2.png" width="100%" style="margin:0px; border:none;" />
+    <small>lengthscale in degrees, values above, journey duration (in seconds)</small>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Cloaking and Inducing Inputs</h3>
+    <p>Outliers poorly predicted. <br/>Too much noise around data 'edges'.</p>
+    <p>Use inducing inputs to reduce the<br/> sensitivity to these outliers.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;" data-transition="none">
+    <h3 style="color:black;">Cloaking (no) Inducing Inputs</h3>
+    <img src="assets/cloakingnoinducing.png" width="100%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;" data-transition="none">
+    <h3 style="color:black;">Cloaking and Inducing Inputs</h3>
+    <img src="assets/cloakinginducing.png" width="100%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    <h3 style="color:black;">Results</h3>
+    <p>For 1d !Kung, RMSE improved<br/> from $15.0 \pm 2.0 \text{cm}$ to $11.1 \pm 0.8 \text{cm}$</p>
+    <p>Use Age and Weight to predict Height</p>
+    <p>For 2d !Kung, RMSE improved<br/> from $22.8 \pm 1.9 \text{cm}$ to $8.8 \pm 0.6 \text{cm}$</p>
+    <p><small>Note that the uncertainty across x-validation runs smaller.<br/>
+    2d version benefits from data's 1d manifold.</small></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;" data-transition="none">
+    <h3 style="color:black;">Cloaking (no) Inducing Inputs</h3>
+    <img src="assets/noind.png" width="100%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;" data-transition="none">
+    <h3 style="color:black;">Cloaking and Inducing Inputs</h3>
+    <img src="assets/ind.png" width="100%" style="margin:0px; border:none;" />
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+    
+    <p><b>Summary</b> We have developed an improved method for performing differentially private regression.</p>
+    <p><b>Future work</b> Multiple outputs, GP classification, DP Optimising hyperparameters, Making the inputs private.</p>
+    <p><b>Thanks</b> Funders: EPSRC; Colleagues: Mauricio, Neil, Max.</p>
+    <p><b>Recruiting</b> Deep Probabilistic Models: 2 year postdoc (<a href="http://tinyurl.com/shefpostdoc">tinyurl.com/shefpostdoc</a>)</p>
+
+
+
+</section>
+
+<section data-background="assets/pres_bg.png">
+<small>
+<p align="left">
+<span style='margin-left:-50px;'><b>The go-to book on differential privacy, by Dwork and Roth;</b><br/></span>
+Dwork, Cynthia, and Aaron Roth. "The algorithmic foundations of differential privacy." Theoretical Computer Science 9.3-4 (2013): 211-407.
+<a href="https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf">link</a>
+</p>
+<p align="left">
+<span style='margin-left:-50px;'><b>I found this paper allowed me to start applying DP to GP;</b><br/></span>
+Hall, Rob, Alessandro Rinaldo, and Larry Wasserman. "Differential privacy for functions and functional data." The Journal of Machine Learning Research 14.1 (2013): 703-727.
+<a href="http://www.stat.cmu.edu/~arinaldo/papers/hall13a.pdf">link</a>
+</p>
+
+<p align="left">
+<span style='margin-left:-50px;'><b>Articles about the Massachusetts privacy debate</b><br/></span>
+Barth-Jones, Daniel C. "The're-identification'of Governor William Weld's medical information: a critical re-examination of health data identification risks and privacy protections, then and now." Then and Now (June 4, 2012) (2012).  <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2076397">link</a>
+</p>
+<p align="left">
+Ohm, Paul. "Broken promises of privacy: Responding to the surprising failure of anonymization." UCLA Law Review 57 (2010): 1701. <a href="https://epic.org/privacy/reidentification/ohm_article.pdf">link</a>
+</p>
+
+<p align="left">Narayanan, Arvind, and Edward W. Felten. "No silver bullet: De-identification still doesn’t work." White Paper (2014). <a href="http://randomwalker.info/publications/no-silver-bullet-de-identification.pdf">link</a></p>
+
+<p>Howell, N. Data from a partial census of the !kung san,
+dobe. 1967-1969. https://public.tableau.
+com/profile/john.marriott#!/vizhome/
+kung-san/Attributes, 1967.</p>
+
+<p align="left"><span style='margin-left:-50px;'><b>Images used:</b></span>
+BostonGlobe: <a href="https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2015/05/29/BostonGlobe.com/Business/Images/MassMutual_04.jpg">Mass Mutual</a>, 
+ <a href="https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2014/10/20/BostonGlobe.com/Metro/Images/Gov.%20Bill%20Weld%201-100425.jpg">Weld</a>. Harvard: <a href="http://www.gov.harvard.edu/files/Sweeney6crop.jpg">Sweeney</a>. Rich on flickr: <a href="https://www.flickr.com/photos/rich_b1982/13114665103/in/pool-sheffieldskyline/">Sheffield skyline</a>.</p>
+<p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+</small>
+</section>
+
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+        math: {
+            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/math/math.js', async: true }
+		]
+	});
+
+</script>
+
+</body>
+</html>
