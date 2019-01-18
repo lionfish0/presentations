@@ -1,0 +1,14 @@
+- not particularly smart - basically tells the GP to partially (or completely) ignore outliers.
+- result is that the sensitivity of the output predictions to these outliers is substantially reduced, ironically giving better estimates.
+- depends on the data - our outliers are much like the rest of the data, so ignoring them doesn't matter.
+
+- DP becomes increasingly challenging as the dimensionality of the data increases.
+
+- If actual data lies on low-dim manifold then inducing inputs might be a way of coping in these higher dimensions.
+[show 2d plot?]
+
+- Results: [preliminary]
+
+For the 2d !kung example (inputs age and weight, output height)
+
+
