@@ -1,152 +1,318 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 
-		<title>Differentially Private Gaussian Processes</title>
+<title>Differentially Private Gaussian Processes</title>
 
-		<meta name="description" content="Differentially Private Gaussian Processes">
-		<meta name="author" content="Mike Smith">
+<meta name="description" content="Differentially Private Gaussian Processes">
+<meta name="author" content="Mike Smith">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides" data-background="assets/pres_bg.png">
-
-
-			
-			
-				<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-                    
-					<h2 style="color:black;">Fellowship Presentation</h2>
-					<p>
-						Mike Smith, University of Sheffield<br/></p><p>
-                        <small>michaeltsmith.org.uk</small>
-                        <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
-                        <small>@mikethomassmith</small>
-                        <br />
-                        <img src="assets/TUOS_PRIMARY_LOGO_FULL COLOUR.png" height=100px />
-                        <img src="assets/mlnetlogo.png" height=100px />         
-                        <img src="assets/sponsor-highres.jpg" height=100px />
-					</p>
-				</section>
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides" data-background="assets/pres_bg.png">
 
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-					<h2 style="color:black;">Background</h2>
-					<img src="assets/rat.png" width=40% align=right style="position: absolute; right:-100px;" />
-					<img src="assets/fmri.png" width=40% align=right style="position: absolute; right:-100px; top:400px;" />
-					<table style="position:relative; right:200px; width:75%;">
-					<tr><td>BSc Computer Science, Warwick</td><td>Simulated bipedal motion</td></tr>
-					<tr><td>MSc Informatics, Edinburgh</td><td>Synaptic charge-based noise analysis</td></tr>
-					<tr><td>MSc Neuroinformatics, Edinburgh</td><td>Head-direction and place cell recording</td></tr>					
-					<tr><td>PhD Neuroinformatics, Edinburgh</td><td>Integration of self-motion cues in humans</td></tr>					
-					
-					</table>
-				</section>
-				
+<h2 style="color:black;">Fellowship Presentation</h2>
+<p>
+Mike Smith, University of Sheffield<br/></p><p>
+<small>michaeltsmith.org.uk</small>
+<small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
+<small>@mikethomassmith</small>
+<br />
+<img src="assets/TUOS_PRIMARY_LOGO_FULL COLOUR.png" height=100px />
+<img src="assets/mlnetlogo.png" height=100px />         
+<img src="assets/sponsor-highres.jpg" height=100px />
+</p>
+</section>
+
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-					<h2 style="color:black;">Background</h2>
-					<p align="left"><img src="assets/makerere.jpg" width=40% align=right />2014: Moved to Kampala to lecture at Makerere University in the computer science department.<br/>
-					<ul style="display:inline; margin:0px;"><li>Crowd-sourced road crash transcription<li>Air pollution monitoring<img src="assets/crashes.png" width=40% align=right /><li>Malaria incidence modelling</ul></p>
-					<p align="left">2015: InnovateUK Sheffield / CitizenMe grant. Developed scikic online Bayesian education tool & distributed DP method.</p>
-				</section>
-				
+<h2 style="color:black;">Background</h2>
+<img src="assets/rat.png" width=40% align=right style="position: absolute; right:-100px;" />
+<img src="assets/fmri.png" width=40% align=right style="position: absolute; right:-100px; top:400px;" />
+<table style="position:relative; right:200px; width:75%;">
+<tr><td>BSc Computer Science, Warwick</td><td>Simulated bipedal motion</td></tr>
+<tr><td>MSc Informatics, Edinburgh</td><td>Synaptic charge-based noise analysis</td></tr>
+<tr><td>MSc Neuroinformatics, Edinburgh</td><td>Head-direction and place cell recording</td></tr>					
+<tr><td>PhD Neuroinformatics, Edinburgh</td><td>Integration of self-motion cues in humans</td></tr>					
+</table>
+</section>
+
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-					<h2 style="color:black;">Research Now</h2>
-					<img src="assets/alltopics.png" width=100% style="box-shadow:none; border:none; background:none;" />
-				</section>
-				
+<h2 style="color:black;">Background</h2>
+<p align="left"><img src="assets/makerere.jpg" width=40% align=right />2014: Moved to Kampala to lecture at Makerere University in the computer science department.<br/>
+<ul style="display:inline; margin:0px;"><li>Crowd-sourced road crash transcription<li>Air pollution monitoring<img src="assets/crashes.png" width=40% align=right /><li>Malaria incidence modelling</ul></p>
+<p align="left">2015: InnovateUK Sheffield / CitizenMe grant. Developed scikic online Bayesian education tool & distributed DP method.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Research Now</h2>
+<img src="assets/alltopics.png" width=100% style="box-shadow:none; border:none; background:none;" />
+</section>
+
+
+
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;"><img src="assets/adv.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Adversarial Bound</h2>
 <p align=left><img src="assets/adv3.png" width=40% align=right style="margin-left:50px;" /><font color="#777"><b>Collaborators</b>: Kathrin Grosse & David Pfaff of CISPA, Saarland.</font><br/></br>
-
 Adversarial Examples using Gaussian Process classification. In particular can we find a <b>lower bound</b> on the number of pixels one needs to perturb to get a <b>confident misclassification</b>?</p>
-<p align=left><font color="#777"><small><b>Papers</b>: Grosse has one <em>in review</em> (on using GP uncertainty as a way of detecting adversarial examples). We have one <em>in prep</em> on this bounds method.</small></font></p>
 <p align=left><font color="#777"><small><b>Next</b>: deepGPs?</small></font></p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;"><img src="assets/adv.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Adversarial Bound</h2>
 <p align=left><img src="assets/adv2.png" width=40% style="position:relative; top:-10px; margin-left:50px;" />
-<img src="assets/adv1.png" width=40% style="position:relative; top:-10px; margin-left:50px;" />
+<img src="assets/adv1.png" width=40% style="position:relative; top:-10px; margin-left:50px;" /></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/adv.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Adversarial Bound</h2>
+<p align=left><font color="#777"><small><b>Papers</b>:<br/>Kathrin Grosse, David Pfaff, Michael T. Smith, Michael Backes. (2019). The Limitations of Model Uncertainty in Adversarial Settings  (<em><a href="https://arxiv.org/abs/1812.02606">in review</a></em> on 5th Feb to CCS).<br/><br/>Kathrin Grosse, Michael T. Smith, Michael Backes. (2019). Killing Three Birds with one Gaussian Process: Analyzing Attack Vectors on Classification (<em><a href="https://arxiv.org/abs/1806.02032">in review</a></em> at Euro S&P).<br/><br/>
+The bounds method is <em>in prep</em>.</small></font></p>
+</section>
+
+
+
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/dp.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Differential Privacy</h2>
+<p>Finding practical bounds on the scale of DP noise required for GP regression and classification.</p><p align="left"><ul align="left"><li>Developed the <b>cloaking method</b><li>Used <b>inducing inputs</b> to reduce sensitivity<li>Extended to work with <b>classification</b> (using the Laplace approximation)</p>
+<p align=left><font color="#777"><small><b>Papers</b>: Smith, M.T., Álvarez, M. A., Zwiessele, M., Lawrence, N. D. (2018). Differentially Private Gaussian Processes, AI STATS 2018.<br/>We have a second paper covering the inducing inputs, classification, hyperparameter selection, etc, <em>in review</em>, JMLR.</small></font></p>
+<p align=left><font color="#777"><small><b>Next</b>: Input privacy for GPs.</small></font></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/dp.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Differential Privacy</h2>
+<p><img src="assets/cloakinginducing.png" style="box-shadow:none; border:none; background:none;"/></p>
+</section>
+
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/integral.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Integral Kernel</h2>
+<p align=left><img src="assets/integralplot.png" width=40% align=right style="margin-left:50px;" />
+A spin-off from the DP work. Based on GP latent-force models. Uses the observation that one can integrate over a kernel to allow the <b>observations</b> to be of the <b>integral of the latent function</b>. Examples: ecological hectad data, annual financial reports, census aggregations for privacy, camera pixels, fMRI, etc.</p>
+<p align=left><font color="#777"><small><b>Paper</b>: Gaussian Process Regression for Binned Data (Stats and Computing) being revised for resubmission in February.</small></font></p>
+</section>
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/dialysis.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Dialysis Analysis</h2>
+<p align=left><img src="assets/dialysis_example_2.png" width=30% align=right style="margin-left:-50px; left:100px; position:relative;" /><font color="#777"><b>Collaborator</b>: James Fotheringham, Consultant Nephrologist and Honorary Lecturer, ScHARR.</font><br/></br>
+Predict clinical variables over 2-4 days. ICM coregionalisation improved over simple GP fit for a subset of patients (RMSE down 15%, p&lt;0.05). Hierarchical model to incorporate rare events from all patients. 
+</p>
+<p align=left><font color="#777"><small><b>Paper</b>: Drafting a paper looking at where the method works but also what improvements are needed in data quality.</small></font></p>
+</section>
+
+
+
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Continuing Research</h2>
+<img src="assets/topics_2.png" width=100% style="box-shadow:none; border:none; background:none;" />
+</section>
+
+
+
+
+
+
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Kampala Air pollution</h2>
+<p align=left>
+I began the project while working in Kampala. No one was collecting air quality data in the city at the time.<br/><div style="width:150%; left:-25%; position:relative;"><img src="assets/kampala.jpg" height=200  />
+<img src="assets/sensor.jpg" height=200   />
+<img src="assets/shinyei.png" height=200  /></div>
+
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Kampala Air pollution</h2>
+<p align=left>
+<img src="assets/engineer.jpg" width=60% align=right style="margin-left:20px;" />First collaborator was <b>Prof. Engineer Bainomugisha</b>. We won funding from the UC Berkeley’s Development Impact Lab (2016, $56k) to develop the hardware. Recruited Joel Ssematimba.</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Example data stream</h2>
+<iframe width="900" height="600" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/295702/charts/2?average=30&bgcolor=%23ffffff&color=%23d62020&dynamic=true&days=5&type=line&update=15&width=900&height=600"></iframe>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Combining Sensors</h2>
+<p align="left"><img src="assets/mapdemo.png" width=50% align=right style="margin-left:-50px; position:relative; left:50px;" />Current model is a simple GP with inputs:<br/>- latitude, longitude, time<br/>- time-of-day<br/>- distance from large roads</ul>
+<p align=left><font color="#777"><small><b>Output</b>: Presentations and posters at workshops.</small></font></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Combining Sensors</h2>
+<p align="left"><img src="assets/coreg_air.png" width=40% align=right style="margin:20px;" />Testing coregionalisation. Collaborating with <b>Prof. Martin Mayfield</b> of the Urban Observatory, who has lent the project the equipment to validate our methods. <b>Rohit Chakraborty</b>, his PhD student, will be visiting Kampala.</p>
+<p align=left><font color="#777"><small><b>Output</b>: <a href="http://www.michaeltsmith.org.uk/other/manchester_air.pdf">Extended abstract</a> and <a href="https://lionfish0.github.io/presentations/airpol/expanded2018.html#/">talk</a>, Advances in Data Science 2018, Manchester.</small></font></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Impact and collaboration</h2>
+<p align="left"><img src="assets/kernel.png" width=40% align=right style="margin:20px;" />The <b>KCCA (Kampala Authority)</b> are heavily involved in the project, giving us confidence of <b>impact</b> <img src="assets/onpost.jpg" width=40% align=right style="margin:20px;" />(particularly important for funders too). The low-cost network makes it suitable for low-income cities, but requires sophisticated mathematical methods to quantify uncertainty and for calibration.</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Funding</h2>
+<p align="left">We just won the internal <b>QR GCRF</b> funding (£40k). I've allocated this mainly for post-doc time in Kampala to build and deploy the network, also part-time post-doc time (here) for developing the model.<br/><br />Two months Sheffield based post-doc time from <b>Urban Observatory</b> to translate the method for Sheffield's sensor network.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Future Funding</h2>
+Currently applying for the <b>EPSRC GRCF</b> Mathematical Sciences fund (£450k) to pay for post-docs both here and in Kampala for two years. Deadline: 14th February.<br/><br/>
+This would go beyond correlations and will introduce <b>causality</b> and a rudimentary <b>physical-basis</b> to improve model accuracy, but also to allow the KCCA to ask "<b>what if?</b>" questions. We will incorporate anomaly detection.<br/><br/>
+Lots of interest in mathematical methods for development, air pollution, smart-cities, impact and IoT, etc.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/air.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Further collaborations</h2>
+<p align="left">
+We have an effective network of collaborations. Other links are with <b>Dr. Pete Edwards</b> (Chemistry, York) who has provided considerable support on pollution questions and the low-cost sensors. <b>Dr. Bruce Kirenga</b> (Lung Institute, Kampala) will be using our data to answer epidemiological questions. <b>Prof. Richard Wilkinson</b> and <b>Dr. Mauricio A Alvarez</b> are supporting the development of the causal probabilistic model.
+</p>
+<p align=left><font color="#777"><small><b>Initial planned outputs (next seven months)</b>: (1) calibration kernel paper, (2) low-cost sensor designs, (3) results of calibration across city/validate low-cost method.</small></font></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Insect Tracking</h2>
+<p align="left"><b>Motivation</b>: Finding nests and understanding foraging and mating behaviour are vital for conservation. Provision of training data for <b>brainsonboard</b>.<br/><br/>
+<b>The problem</b>: Tracking insects in the field currently necessitates the use of electronic tags and expensive radar equipment, making it largely inaccessible to most researchers and inappropriate for smaller insects.
 </p>
 </section>
 
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;"><img src="assets/dp.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Differential Privacy</h2>
-<p>
-Finding practical bounds on the scale of DP noise required for GP regression and classification.</p><p align="left"><ul align="left"><li>Developed the <b>cloaking method</b><li>Used <b>inducing inputs</b> to reduce sensitivity<li>Extended to work with <b>classification</b> (using the Laplace approximation)</p>
-<p align=left><font color="#777"><small><b>Papers</b>: Smith, M.T., Álvarez, M. A., Zwiessele, M., Lawrence, N. D. (2018). Differentially Private Gaussian Processes, AI STATS 2018.<br/>We have a second paper covering the inducing inputs, classification, hyperparameter selection, etc, <em>in review</em>, JMLR.</small></font></p>
-<p align=left><font color="#777"><small><b>Next</b>: Input privacy for GP regression.</small></font></p>
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Insect Tracking</h2>
+<p align="left"><b>The solution</b>: Simple retroreflective tags (&lt;5mg) and a camera with a flash in the sky.<img src="assets/taggedbee.png" width=40% align=right style="margin:20px;" /><img src="assets/tracker.jpeg" width=40% align=right style="margin:20px;" /><br/><br/>
+</p>
 </section>
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;"><img src="assets/dp.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Differential Privacy</h2>
-<p><img src="assets/cloakinginducing.png" style="box-shadow:none; border:none; background:none;"/></p></section>
-</div>
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Insect Tracking</h2>
+<p align="left"><img src="assets/balloon2.jpg" width=55% style="margin:20px;" /><img src="assets/balloon1.jpg" width=31% style="margin:20px;" /><br/><br/>
+</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Insect Tracking</h2>
+<p><img src="assets/retrodemo.png" width=50% style="margin:20px;" /><br/><br/>
+</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Insect Tracking</h2>
+<p><img src="assets/bee/done.gif" width=80% style="margin:-20px; box-shadow:none; border:none; background:none;" /><br/><br/>
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Collaborations</h2>
+<p align="left"><b>Mike Livingstone</b> (Department of Landscape Architecture) supporting with insect, site and plant expertise. <br/><b>Richard Comont</b> (Bumblebee conservation trust) has been advising on relevant research questions. <br/><b>Michael Mangan</b> and  the <b>brainsonboard</b> multiyear project will be conducting honey bee experiments. Tracking them as they navigate is currently challenging. The system will slot into this perfectly, providing behavioural data to help with model constraint.<br/>
+<b>Prof Jeremy Field</b> has contacted me about using the system for investigating where paper wasp workers.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"><img src="assets/bee.png" width=10% style="vertical-align:middle; box-shadow:none; border:none; background:none; padding-right:20px;" />Funding</h2>
+<p align="left"><b>Previously</b>:</br> Won two rounds of Sheffield University Socially Enterprising Researcher grant (2016 & 2017).<br/> Applied for BES small-grants, but with insufficient ecological research experience.
+</br><b>Future</b>:<br/> Will resubmit to the BES with ecologist as co-I, with specific biological research question in mind (deadline 20th March). Also will apply to the C.B. Dennis trust (1st March).</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Vision & Strategic Fit</h2>
+<p align="left">The <b>insect tracking</b> and <b>air pollution</b> projects both have <b>high impact potential</b> and <b>strong collaborative networks</b>, with partnerships both inside the university and internationally.<br/>The <b>air pollution</b> project in particular has the potential to accrue funding (e.g. for future expansion to other domains). </br><b>Insect tracking</b>: The recent attention to the massive decline in insect populations has focused interest on this field and the urgent need to develop observational methods.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Pollution Project: Vision</h2>
+<ul>
+<li>Development increasingly based on <b>integrating</b> multiple sources of real-time, <b>low-cost</b>, large-scale data.
+<li>Suffer from <b>biases</b> and unquantified <b>uncertainty</b>.
+<li>But may allow cities in the Global South to '<b>leap-frog</b>' the systems in the Global North.
+<li>Unfortunately using such data depends on more <b>sophisticated methods</b>.
+<li><font color="#777">Need to develop robust <b>mathematical tools</b> for its analysis and integration.</font>
+<li><font color="#777">Ensure that this development is conducted <b>in partnership</b> with those research groups who will later need to apply it locally.</font>
+</ul>
+</section>
 
 </div>
-
+</div>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
-
 <script>
 
-	// Full list of configuration options available at:
-	// https://github.com/hakimel/reveal.js#configuration
-	Reveal.initialize({
-		controls: true,
-		progress: true,
-		history: true,
-		center: true,
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
 
-        math: {
-            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
-            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-        },
+math: {
+mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+},
 
-		transition: 'slide', // none/fade/slide/convex/concave/zoom
+transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-		// Optional reveal.js plugins
-		dependencies: [
-			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-			{ src: 'plugin/zoom-js/zoom.js', async: true },
-			{ src: 'plugin/notes/notes.js', async: true },
-            { src: 'plugin/math/math.js', async: true }
-		]
-	});
+// Optional reveal.js plugins
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true },
+{ src: 'plugin/math/math.js', async: true }
+]
+});
 
 </script>
 
