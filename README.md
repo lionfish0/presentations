@@ -1,5 +1,9 @@
 # Links to talks
 
+## Fellowship
+
+2019 <a href="https://lionfish0.github.io/presentations/fellowship/#/">here</a>.	
+
 ## DP for GP with inducing inputs
 
 Normal version <a href="https://lionfish0.github.io/presentations/dp4gp/#/">here</a>.	
