@@ -1,0 +1,35 @@
+
+
+        [2, 182 - ensemble classifier - may work better?] -> 100 shows not.
+        
+        messing with inputs
+        [271 - feature squeezing, 63-jpg compression]
+        [34 - defence overview]
+        [103 - tried to use strength of softmax]
+        People have also tried adjusting activation functions etc (e.g. 277)
+    <h2>Other approaches</h2>
+    Game theory - [56]
+    
+   
+    
+    see 229 - 
+    bounds on jacobian
+    
+    280 - generalisation in NN
+
+    216 - NNs converge to saddle points (not local minima)
+    
+    
+    
+    
+    129/48 - Audio data 
+    Try:(Attack humans) see also 81
+    
+    
+    what is 134 - rubbish examples recognisable?
+    
+
+    link to DP.
+    <section data-background="assets/pres_bg.png">    
+<p><small>    Tabacof, 2016 also investigate noise added to images. Oddly find that `for the same task, a shallow classifier seems <b>more robust</b> to adversarial images than a deep convolutional network'.</small></p> -- might be scale of change you can get is greater when weights are multiplied together?
+     </section>
