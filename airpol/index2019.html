@@ -1,0 +1,429 @@
+    <!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Air Pollution: Kampala</title>
+
+		<meta name="description" content="Air Pollution: Kampala">
+		<meta name="author" content="Mike Smith">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+
+				<section data-background="assets/pres_bg.jpg">
+                    
+					<h3>Air Pollution: Kampala</h3>
+					<p>
+						<small>Presented by Mike Smith, University of Sheffield</small><br/>
+                        <small>michaeltsmith.org.uk</small>
+                        <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
+                        <small>@mikethomassmith</small>
+                        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+					</p>
+				</section>
+				<section>
+                    
+					<h3>Why does it matter?</h3>
+					<p>
+					In 2012, harm equivalent to 2.6 million deaths, due to outdoor air pollution (mostly heart disease or stroke).
+<br /><br />
+Summary: Air pollution is a big deal (similar scale as malaria?).
+<br /><br />
+<small>Note: We'll focus on PM2.5.</small>
+<br/>
+<br/>
+</p>
+<p><small>WHO press release 2014: http://www.who.int/mediacentre/news/releases/2014/air-pollution/en/</small></p>
+				</section>
+                <section>
+                    
+					<h3>How bad is it?</h3>
+					<p>
+					Only two papers about Kampala's air quality (Stephan Schwander's group), and a new sensor at the US embassy. <br />
+					<img src="assets/Global_pm10_cities_cropped.png" width=100%/><br/>
+					<br /><br/><small>(white board)</small></p>
+					<p>
+					</section>
+				<section id="fragments">
+				<h3>US Embassy sensor</h3>
+				<img src="assets/usembassy.png" />
+				<ul>
+				<li>WHO Guidelines: 10 $\mu \text{g/m}^3$ (annual mean)
+				<li>EU Guidelines: 18 $\mu \text{g/m}^3$
+				<li>US Guidelines: 12 $\mu \text{g/m}^3$
+				</ul>
+				</section>					
+				<section>
+				<h3>US Embassy sensor: by hour</h3>				
+				<img src="assets/usembassy24.png" />
+				<p>
+				Other sensors in other locations in city agree with general trend.<br/>
+				Night time peak found in other tropical and subtropical cities.
+				<ul><li>Any advice or comments?</li></ul>
+				</p>
+				<br/>
+				<br/>
+
+				</section>			
+				<section>
+				<img src="assets/allplot24.png" width=40% style="margin-top:-50px;" />
+				<br/>
+				<br/>
+
+				</section>					
+				<section>
+				<h3>US Embassy sensor</h3>
+				<img src="assets/map.png" />
+				<br/>
+				<ul><li>Provides good, reliable, calibrated data.</li>
+				<li>Only tells us about pollution at the Embassy (A).</li>
+				</ul>
+								
+				</section>	
+				<section>
+				<h3>Methods for estimating pollution</h3>
+				<p>
+				<ul>
+				<li>Land Use Regression
+				  <ul><li>not probabilistic, typically linear regression, long term avgs
+				  <li>Ideally requires 40+ sensors... [expensive]
+				</ul>
+				<li>Dispersion models (include box and Gaussian plume models). Really depend on having an idea where pollution is from.</li>
+				<li>Advection/diffusion models (sources? how to make probabilistic?)<ul><li>our long-term aim (see Wikle 2002)</li></ul></li>
+				<li>Not my expertise, comments?</li>
+				<br/> 
+				<small>Hoek, Gerard, et al. "A review of land-use regression models to assess spatial variation of outdoor air pollution." Atmospheric environment 42.33 (2008): 7561-7578.</small><small>Wu, Jiansheng, et al. "Applying land use regression model to estimate spatial variation of PM2. 5 in Beijing, China." Environmental Science and Pollution Research 22.9 (2015): 7045-7061.</small><small>Wikle, Christopher K. "<b>A kernel-based spectral model for non-Gaussian spatio-temporal processes.</b>" Statistical Modelling 2.4 (2002): 299-314.</small>
+				</p>
+				</section>
+				<section>
+				<h3>Plan</h3>
+				<p>Can we combine lots of low-cost sensors with a few precision devices to acheive similiar accuracies to a full-scale network?
+				</p>
+				</section>
+				<section>
+				<h1>PART 1: HARDWARE DEVELOPMENT</h1>
+				</section>
+                <section>
+                    
+					<h3>Project development</h3>
+					<p>Began with trying the Shinyei sensor hooked up to a phone (2014).<br />
+					<img src="assets/IMG_5694.JPG" width="35%" />
+					<img src="assets/shinyei.png" width="50%" />					
+					</p>
+				</section>
+                <section>
+					<h3>Boda boda deployment</h3>
+					<p>Engineer Bainomugisha. Ssematimba Joel hardware dev.<br />
+					Switched to OPC sensor from AlphaSense.
+					<br/>
+					<small>
+					<img src="assets/IMG_20170712_125154030.jpg" width="75%" style="margin:5px;" /><br/>
+					From left to right: Ssekanjako John, the bodaboda driver; me; Engineer Bainomugisha.</small>
+					</p>
+				</section>
+                <section>
+					<h3>Static site deployment</h3>
+					<img src="assets/IMG_20170712_153951028.jpg" width="90%" style="margin:5px;" />					
+				</section>
+                <section>
+					<h3>Static site deployment</h3>
+					<img src="assets/IMG_20170712_145249353.jpg" width="90%" style="margin:5px;" />					
+				</section>				
+                <section>
+                    
+					<h3>Project development</h3>
+					<img src="assets/IMG_20170712_125228295.jpg" width="30%" align="right" />
+					<p>unobtrusive hardware...				
+					</p>
+				</section>
+				<section>
+				<h1>PART 2: COMBINING SENSORS</h1>
+				</section>
+				<section>
+				<h3>Basic Gaussian Process Regression</h3>
+				<p>
+				<img src="assets/york.png" style="border:none; box-shadow:none;" />
+				</p>
+				</section>
+				<section>
+				<h3>Basic Gaussian Process Regression</h3>
+				<p>
+				<img src="assets/york2.png" style="border:none; box-shadow:none;" />
+				</p>
+				</section>
+				<section>
+				<p>
+				We would also include time as an input.<br/>
+				<img src="assets/york3.png" style="border:none; box-shadow:none;" width="50%" />
+				</p>
+				</section>
+				<section>
+				<h3>Basic Gaussian Process Regression</h3>
+				
+				<p>
+				The function that describes this is known as the kernel. It is used to compute the covariance between all the training (and test) points to produce a covariance matrix</p>
+				<img src="assets/timedemo1.png" style="border:none; box-shadow:none;" />
+				</p>
+				</section>
+				<section>
+				<h3>Basic Gaussian Process Regression</h3>
+				<p>
+				We can compute the covariance between two sensors over time,
+				</p>
+				<img src="assets/twosensors.png" style="border:none; box-shadow:none;" />
+				</p>
+				</section>
+				<section>
+				<h3>Basic Gaussian Process Regression</h3>
+				<p>Using a GP model, with inputs:
+				<ul>
+				<li>latitude, longitude and time
+				<li>time-of-day
+				<li>distance from large roads (data from OSM)
+				<li>MSc student scraping traffic data from google maps!
+				</ul>
+				</p>
+				<p>
+				We can treat these variables as simply inputs to the GP.
+				<br/>
+				</p><p>
+				<a href="https://lionfish0.github.io/air-quality-kampala/">website</a>
+				</p>
+				</section>  
+				<section>
+				<h3>Coregionalised Gaussian Process Regression</h3>
+				<p>
+				Supposing one sensor reports 50% of the actual value?
+				</p>
+				<img src="assets/york5.png" style="border:none; box-shadow:none;" />
+				</p>
+				</section>
+				<section>
+				<h3>Coregionalised Gaussian Process Regression</h3>
+				<p>
+				Scale the covariance by elements from a 'coregionalisation' matrix.
+				In this case we assume simply that the sensors are proportional to each other. So we use a rank-one covariance matrix, $\mathbf{w} \mathbf{w}^\top$, and need to estimate a single value for each sensor (in vector $\mathbf{w}$)</p>
+				<img src="assets/coregionalisation.png" style="border:none; box-shadow:none;" />
+				<img src="assets/coreg.png" style="border:none; box-shadow:none;" />
+				<p>
+				Note: Computationally efficient if measurements are taken at the same times.
+				</p>
+				</section>
+				
+				<section>
+				<h3>Combining Sensors</h3>
+				<p style="border:0px; margin-top:-20px;"><small>Sensors aren't necessarily calibrated, but are still correlated</small></p>
+				<img src="assets/steinle15.png" height=300 style="border:0px; margin-top:-20px;" />
+				<img src="assets/gao15.png" height=300 style="border:0px; margin-top:-20px;" />
+				<img src="assets/holstius14.png" height=300 style="border:0px; margin-top:-20px;" />
+				<p style="font-size:8pt;">Steinle, Susanne, et al. "Personal exposure monitoring of PM2. 5 in indoor and outdoor microenvironments." Science of the Total Environment 508 (2015): 383-394.<br/>Gao, Meiling, Junji Cao, and Edmund Seto. "A distributed network of low-cost continuous reading sensors to measure spatiotemporal variations of PM2. 5 in Xi'an, China." Environmental pollution 199 (2015): 56-65. <br/>Holstius, David M., et al. "Field calibrations of a low-cost aerosol sensor at a regulatory monitoring site in California." Atmospheric Measurement Techniques 7.4 (2014): 1121-1131.</p>
+				</section>
+				<section>
+				<h3>Combining Sensors</h3>
+				<p style="border:0px; margin-top:-20px;"><small>Sensors aren't necessarily calibrated, but are still correlated</small></p>
+				<img src="assets/coregdemo.png" width=50% style="border:0px; margin-top:-20px;" />
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal1.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal2.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal3.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal4.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal5.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				<section data-transition="none">
+				<h3>Calibration with Coregionalisation</h3>
+				<p><img src="assets/cal6.png" width=80% style="border:0px; margin-top:-20px;" /></p>
+				</section>
+				
+				
+				<section>
+				<h3>Calibration with Coregionalisation</h3>
+				<ul>
+				<li>Need to consider sensor proximity</li>
+				<li>Assume sensors are proportional (rank-one, $\mathbf{w} \mathbf{w}^\top$)</li>
+				<li style="margin-bottom:-20px;">Toy example: Three sensors. One sensor swaps location.
+				<img src="assets/coregfig.png" style="margin-bottom:0px;"/>
+				<small>Element-wise product (not Kronecker product)</small>
+				<li>Hyperparameters $\mathbf{w}$ only relevant where 'proximity' matrix is non-zero. So need to have sensors co-located to estimate these.
+				<li>Need to use CCD or similar to incorporate uncertainty in $\mathbf{w}$.
+				</ul>
+				</section>
+				<section>
+				<h1>PART 3: BODA BODAS</h1>
+				</section>
+				<section>
+				<h3>Boda bodas</h3>
+				<p>
+				<small>video!</small>
+				</p>				
+				</section>
+				<section>
+				<h3>Boda bodas</h3>
+				<ul>
+				<li>Boda-bodas provide spatial detail about pollution
+				<li>Might help with calibrating fixed sensors?
+				<li>Appear to be providing reasonably 'realistic' data
+				</ul>
+				
+				</section>
+				<section>
+				<h3>Boda boda data</h3>
+				<img src="assets/mapwithsat.png" style="border:0px;" />
+				</section>
+				<section>
+				<h3>$w$ might change?</h3>
+				<ul>
+				<li>Need very regular calibration (problems with clogging)
+				<img src="assets/clogprob.png" style="margin-bottom:150px;"/>
+				<img src="assets/clog.jpg" width=30% />
+				<li>Estimates of $\mathbf{w}$ will need to vary. Model with a GP too?
+				</ul>
+				</section>
+
+				<section>
+				<h3>Future ideas</h3>
+				<ul>
+				<li>Use <b>active learning</b> to select location for bodaboda to visit
+				<li>Look at <b>sources</b> of pollution to try to start assigning causality
+				<li>Apply <b>differential privacy</b> to ensure boda location remains private
+				<li>Correlate with <b>hospital admissions</b>?
+				</ul>
+				<p><img src="assets/osiris.jpg" width=150px style="border:none;" align="right" />New! The Sheffield Urban Observatory is lending three MCERTS TurnKey OSIRIS OPCs for deployment in Kamapala (and funding 15 low-cost sensors). This will allow us to calibrate the low-cost units.
+				</section>
+				<section>
+				<h3>Actions/Effects</h3>
+				<ul>
+				<li>Awareness raising - leads to civic response?
+				<li>If we get causation - we'll know what to target.
+				<li>Baseline necessary for mitigation to be assessed.				
+				<li>KCCA planning non-motorised area in Old Kampala!
+				</ul>
+				<img src="assets/pedestrianise.png" width="100%" />
+				</section>
+				<section>
+				<h3>Thanks</h3>
+				<p>DIL Berkeley award, ARM, the Urban Observatory and the EPSRC.
+				<br/>
+				<img src="assets/funders2.png" width=50%/>
+				<br/>
+				Engineer Bainomugisha; Ssematimba Joel<br/>
+				<img src="assets/engineer.png" width=15%/>
+				<img src="assets/joel.png" width=13% />
+				<br/>
+				Pius Kavuma, AI Lab (3d printer!); Irene Michalaki, ARM;<br/>
+			    Mauricio Alvarez and Neil Lawrence
+				</p>
+				</section>	
+				<section>
+				<h3>Questions for you!</h3>
+				<ul>
+				<li>Protocols for pollution survey?
+				<li>Humidity?
+				<li>Thoughts on the mobile sensors?
+				<li>Distinguishing pollution sources by PM size??
+				<li>Other pollutants we should be measuring? (low cost?)
+				<li>Fairly simple public health experiments? (currently handing data onwards to the Lung Inst. etc)
+				<li>Problems with fairly quick clogging from dust.
+				<li>Develop a proposal describing a set of possible interventions? Who have you worked with on this?
+				</ul>
+				</section>
+				<section>
+				<h3>References</h3>
+<p align="left">				
+<small>
+Schwander, Stephan, et al. "Ambient particulate matter air pollution in Mpererwe District, Kampala, Uganda: a pilot study." Journal of environmental and public health 2014 (2014).
+<br/><br/>
+Kirenga, Bruce J., et al. "The state of ambient air quality in Two Ugandan cities: a pilot cross-sectional spatial assessment." International journal of environmental research and public health 12.7 (2015): 8075-8091.
+<br/><br/>
+Manchester air pollution averages:
+http://www.manchester.gov.uk/download/downloads/id/24305/greater_manchester_air_quality_annual_status_report_asr_2015.pdf
+<br/><br/>
+Diurnal peak time in sub-tropical/tropical locations
+<br/>Latha, K. Madhavi, and K. V. S. Badarinath. "Seasonal variations of PM10 and PM2. 5 particles loading over tropical urban environment." International journal of environmental health research 15.1 (2005): 63-68. <br />Zhang, Yan-Lin, and Fang Cao. "Fine particulate matter (PM 2.5) in China at a city level." Scientific Reports 5 (2015): 14884.</small>
+</small>
+</p>
+<br/>
+</section>
+          </div>
+    </div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+        width: '90%',
+        height: '100%',
+
+        math: {
+            mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
+
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+		// Optional reveal.js plugins
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/math/math.js', async: true }
+		]
+	});
+
+</script>
+
+</body>
+</html>
