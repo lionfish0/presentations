@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>ML and Cloud Computing</title>
+
+<meta name="description" content="Fellowship Talk">
+<meta name="author" content="Mike Smith">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides" data-background="assets/pres_bg.png">
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">ML and Cloud Computing</h2>
+<p>
+Dr. Mike Smith, University of Sheffield<br/></p><p>
+<small>michaeltsmith.org.uk</small>
+<small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
+<small>@mikethomassmith</small>
+<br />
+<img src="assets/TUOS_PRIMARY_LOGO_FULL COLOUR.png" height=100px />
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">HPC vs the Cloud</h2>
+<p>
+Until now we've used the university's own HPC system.
+</p>
+<p><b>HPC</b> - Often provided for free by institution, highly interconnected nodes - vital for many problems.</p>
+<p><b>Cloud</b> - No queuing, quick to set up, often only option outside of universities. Well suited for embarrassingly parallel problems. Remains up-to-date. Almost all platforms and features supported.</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Type of problem</h2>
+<p>
+On the cloud one typically rents (virtual) hardware while you need it. This can lead to cost savings (also see spot pricing) - as one doesn't need to maintain or buy expensive compute resources which will quickly devalue. Often batch jobs require somewhat hacky scripts to collect together the results on HPC, while tools like dask let you run the whole operation from a single jupyter notebook as if the whole computation was local. Also very large clusters can be created briefly.
+</p>
+<p>Problems include: accidental spend, security issues, unable to solve some types of problem, limited support.</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;"></h2>
+<p>
+<img src="assets/computeexample.png" />
+</p>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Recap of some terms...</h2>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">MapReduce</h2>
+<p>
+<img src="assets/mapreducelogo.png" width=200>
+<br/>
+<b>MapReduce</b> is both a model and a particular implementation of a method for running calculations on a large set of data. It consists of two stages:
+<ul>
+<li>A simple operation is carried out in parallel on all elements of a dataset (typically depends on the problem being embarrassingly parallel). This is the <b>map</b> stage.
+<li>The result of these simple operations are <b>shuffled</b> to be in the right locations and then are used to generate a result (the <b>reduce</b> stage). The hadoop implementation also includes a combiner (which sort of does partial reduction).
+</ul>
+A simple example is performing a <a href="https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html">word frequency count</a>. The map stage simply creates a set of tuples, pairing each word with a 1. The combiner and reducer stages then add these up. Because this is distributed, this can scale.
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<img src="assets/mapreduce.png">
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Apache Spark</h2>
+<p>
+<img src="assets/Spark.png">
+<br/>
+<b>Apache SPARK</b> is a distributed cluster computing framework.
+<ul>
+<li>Originally developed at University of California, Berkeley. 
+<li>Avoids many limitations of the MapReduce framework.
+<li>Particularly useful for iterative algorithms (typical of ML gradient descent for example).
+<li>Based on read-only distributed objects called resilient distributed datasets (RDDs).
+</ul>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">kubernetes</h2>
+<p>
+<img src="assets/Kubernetes.png">
+<br/>
+<b>kubernetes</b>
+<ul>
+<li>Organisers distributed containers. Alls automated application deployment.
+<li>Means we don't have to connect to the nodes and faff with setting up stuff. This is all done for us.
+<li>Typically uses docker to manage this.
+<li>(<a href="https://www.youtube.com/watch?v=znhnDHAPCZE">video lecture</a> using kubernetes on google cloud)
+</ul>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">hadoop</h2>
+<p>
+<img src="assets/hadoop.png">
+<br/>
+<b>hadoop</b> is a collection of tools. The main one we'll be interested in is its file system (the hadoop distributed file system, HDFS).<br/>
+Also includes YARN (scheduler) and a MapReduce implementation.
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">docker</h2>
+<p>
+<img src="assets/docker.png">
+<br/>
+<b>docker</b> allows us to put all the software, libraries and configuration files that you need to run an application into a container.
+<ul>
+<li>Mainly for linux.
+<li>Sort of replaces VMs - but in a lighter way, and makes it easier to move data between them.
+</ul>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+For the practical we'll be using Amazon Web Services. However the steps are similar in google cloud etc.
+<br/>
+The computation on AWS is centred around virtual machines called <b>instances</b>. There are a huge range of configurations to select from now:
+<ul>
+<li><b>General purpose</b>. e.g. T2/T3: are cheap burstable instances: You get so much compute per hour, and can use it in bursts. For example the t3.nano gives you 10% time each hour. Ideal for maybe a low-traffic server.
+<li><b>Compute optimised</b>. Lots of CPU (largest instance c5.18xlarge with 72 virtual CPUs).
+<li><b>Memory optimised</b>. Many ML calculations require lots of memory (e.g. Gaussian processes). The r5a.24xlarge provides 768Gb of memory.
+<li><b>Accelerated computing</b>. Instances with lots of GPUs and memory.
+</ul>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Storage</h2>
+<p>
+There are many types of storage provided by AWS. They trade off price, reliability and speed.
+<ul>
+<li>Amazon Glacier: Low cost, very slow access (hours)
+<li>Elastic Block Store: This is the type of storage you need in your EC2 instance.
+<ul>
+<li>slowest/cheapest: sc1 (simple HDD)
+<li>still cheap: st1 (throughput-optimised HDD)
+<li>solid-state: gp2 (general purpose SSD)
+<li>fast/expensive: io1
+</ul>
+<li>Amazon s3 (a simple storage service). Basic storage unit is a "bucket". Easy way of sharing data too (example <a href="https://openaq-data.s3.amazonaws.com/index.html">openaq data</a>). Looks a bit like a file system. Has API and CLI as does the rest of AWS.
+</ul>
+<a href="https://databricks.com/blog/2017/05/31/top-5-reasons-for-choosing-s3-over-hdfs.html">s3 vs hdfs</a>
+</p>
+
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+When creating an instance you get to select the operating system and software installed. Or can use a custom image (which might also contain data and specific configuration).
+</p>
+<p>To reduce costs one could use spot pricing - this uses spare compute and a form of bidding. If the price goes above a threshold you set the instance is terminated.</p>
+<p>Instances also come with different bandwidths - may be relevant if setting up a cluster for example</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Other</h2>
+<p>
+AWS Lambda
+autoscaling
+Amazon EMR
+Key pairs (use content from notebook)
+Security
+</p>
+</section>
+
+
+</div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+math: {
+mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+},
+
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+// Optional reveal.js plugins
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true },
+{ src: 'plugin/math/math.js', async: true }
+]
+});
+
+</script>
+
+</body>
+</html>
