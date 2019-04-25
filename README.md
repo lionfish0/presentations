@@ -1,5 +1,9 @@
 # Links to talks
 
+## Cloud Computing Course
+
+2019 <a href="https://lionfish0.github.io/presentations/cloudcompute/#/">here</a>.	
+
 ## Fellowship
 
 2019 <a href="https://lionfish0.github.io/presentations/fellowship/#/">here</a>.	
