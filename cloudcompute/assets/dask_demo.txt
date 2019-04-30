@@ -1,3 +1,48 @@
+==============LAMBDA DEMO===============
+1. click lambda in aws
+2. Create Function
+3. Author from scratch
+4. fn name: mathsdemo
+5. Runtime: python 3.x
+6. permissions, use existing role (Select the only role)
+7. Create.
+---
+8. Add API Gatway
+9. Create a new API
+10.Security - open
+11.API Name - use default
+12.Add.
+---
+13. Click on the demo lambda symbol
+14. In the code:
+CODE:
+
+import json
+
+def lambda_handler(event, context):
+    if ('inputA' in event['queryStringParameters']) and ('inputB' in event['queryStringParameters']):
+        
+        return {
+            'statusCode': 200,
+            'body': json.dumps(float(event['queryStringParameters']['inputA'])+float(event['queryStringParameters']['inputB']))
+        }
+    else:
+        return {
+            'statusCode': 422,
+            'body': json.dumps(event) #'Need inputA and inputB'
+        }
+        
+TEST:
+{
+"queryStringParameters": {
+  "inputA": "42",
+  "inputB": "58"}
+}
+
+
+
+
+==============DASK DEMO===============
 daskec2lite --pathtokeyfile '/home/mike/.ssh/research.pem' --keyname 'research' --username 'mike' --imageid ami-19a58760 --sgid sg-9146afe9 --numinstances 6
 
 [COPY IP-ADDRESS]
@@ -11,10 +56,45 @@ ssh [IPADDRESS]
 (copy link)
 
 ssh -N -f -L localhost:8891:localhost:8889 mike@[IP-ADDRESS]
+ssh -N -f -L localhost:8891:localhost:8889 mike@34.244.82.63 -i .ssh/research.pem
 
 (paste link, edit to 8891)
 
 new notebook
+
+==
+import matplotlib.pyplot as plt
+%matplotlib inline
+import sklearn
+import numpy as np
+
+X = np.random.randn(10000,1)*10
+Y = (np.sin(X/10)+X/10+np.random.randn(10000,1)*0.3)[:,0]
+
+plt.scatter(X,Y,1)
+
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.gaussian_process.kernels import RBF
+
+def compute_error(lengthscale, trainingX, trainingY, testX, testY):
+    kernel = RBF(lengthscale)
+    gp = GaussianProcessRegressor(kernel=kernel, optimizer=None, alpha=1.0)
+    gp.fit(trainingX,trainingY)
+    return np.mean(np.abs(gp.predict(testX)-testY))
+
+lsrange = 10**np.linspace(-5,5,1)
+%timeit -n1 -r1 results = [compute_error(ls,X[0:8000,:],Y[0:8000],X[8000:,:],Y[8000:]) for ls in lsrange]
+
+
+from dask.distributed import Client
+from dask import compute, delayed
+
+lsrange = 10**np.linspace(-5,5,100)
+values = [delayed(compute_error)(ls,X[0:8000,:],Y[0:8000],X[8000:,:],Y[8000:]) for ls in lsrange]
+client = Client("127.0.0.1:8786")
+%timeit -n1 -r1 results = compute(*values, scheduler='distributed')
+==
+
 
 
 
@@ -54,17 +134,13 @@ client = Client("127.0.0.1:8786")
 
 
 
-plt.plot(10**np.linspace(-5,5,100),np.array(results))
+plt.plot(10**np.linspace(-5,5,10),np.array(results))
 ax = plt.gca()
 ax.set_xscale('log')
 
-===========================================================
+====================TERRAFORM DEMO=======================
 
 Terraform Demo
-- get the AMI for the latest Amazon ubuntu instance...
-
-aws ec2 describe-images --owners 099720109477 --filters 'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-????????' 'Name=state,Values=available' --output json | jq -r '.Images | sort_by(.CreationDate) | last(.[]).ImageId'
-
 (see in terratest)
 
 run:

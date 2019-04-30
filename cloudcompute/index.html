@@ -92,7 +92,7 @@ Why stay local?
 Until now we've used the university's own HPC system.
 </p>
 <p><b>HPC</b> - Often provided for free by institution, highly interconnected nodes - vital for many problems.</p>
-<p><b>Cloud</b> - No queuing, quick to set up, often only option outside of universities. Well suited for embarrassingly parallel problems. Remains up-to-date. Almost all platforms and features supported.</p>
+<p><b>Cloud</b> - No queuing, quick to set up, often only option outside of universities. Well suited for embarrassingly parallel problems. Remains up-to-date. Almost all platforms and features supported. Appropriate if hosting a front-end server.</p>
 </section>
 
 
@@ -222,14 +222,25 @@ You'll be familiar with things like google docs, etc - the software is provided 
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;">Infrastructure as Code</h2>
+<h2 style="color:black;">Infrastructure as Code</h2><p><b>(IaC)</b></p>
 <p>
 <ul>
-<li>Clicking lots of buttons to set up servers and software is slow and prone to mistakes, and hard to automate or repeat</li>
+<li>Clicking lots of buttons to set up servers and software is slow and prone to mistakes, and hard to automate or repeat.</li>
 <li>Instead we can define the computers, libraries, systems and software using code.
 </ul>
 </p>
 </section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Terraform</h2>
+<p>
+Terraform is an IaC tool.
+</p>
+<p>Quoting wikipedia:
+<em>It enables users to define and provision a datacenter infrastructure using a high-level configuration language known as Hashicorp Configuration Language (HCL),</em>
+<p>(demo)</p>
+</section>
+
 
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -259,7 +270,7 @@ You'll be familiar with things like google docs, etc - the software is provided 
 <img src="assets/dask.svg" width=200>
 <br/>
 <b>dask</b> is a library for performing parallel computation for python. I've used it mainly for embarrassingly parallel problems. It makes distributing cross-validation or grid-searches for example very easy.
-<p>Show example</p>
+<p>(show example)</p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -370,15 +381,53 @@ When creating an instance you get to select the operating system and software in
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">AWS: Lambda</h2>
 <p>
-<b>AWS Lambda</b> allows you to put code on the cloud, without having to deal with running a server. The code is triggered by a variety of events, and can perform (basically) arbitrarily complex tasks in response. Typically stateless.</p>
-<p>show demo.</p>
+<b>AWS Lambda</b> allows you to put code on the cloud, without having to deal with running a server. The code is triggered by a variety of events, and can perform basic tasks in response. Typically stateless.</p>
+<p>(show demo).</p>
 <a href="https://tutorials.botsfloor.com/run-facebook-messenger-chat-bot-on-aws-lambda-2fa800a67d76">reference for example</a>.
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;">AWS: EMR</h2>
-AWS Elastic Map Reduce is a system for configuring (potentially autoscaling) clusters of computers. We'll cover this more in the practical so I won't mention it too much here.
+<h2 style="color:black;">AWS: EMR</h2><p>
+AWS <b>Elastic Map Reduce</b> is a system for configuring (potentially autoscaling) clusters of computers. We'll cover this more in the practical so I won't mention it too much here.
 </p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary...</h2>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>Lots of methods for using the cloud, depending on the use case.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>Often (for ML) it's not worth parallelising!</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>Cloud Computing potentially quicker and useful if need to be providing a service.</p>
+<p>HPC has powerful interconnects and is often free for researchers. Privacy and security maybe less of an issue using an HPC.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>Example <b>tools, methods and libraries</b>: dask, map-reduce, spark, terraform, hadoop, docker</p>
+<p><b>Service Models</b>: IaaS/PaaS/SaaS/IaC</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>AWS: Instances (processing? memory? GPUs? bandwidth?), Lambda, EMR.</p>
+</section>
+
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Summary</h2>
+<p>Finally: Technology's changing very quickly (most of the examples given are tools that are less than ten years old, need to search for the best tool for the job).</p>
 </section>
 
 
