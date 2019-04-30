@@ -50,6 +50,43 @@ Dr. Mike Smith, University of Sheffield<br/></p><p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Local vs Parallel</h2>
+<p>
+<b>It's not always worth parallelising your application!</b><br/>
+Human time is worth more than compute, so if you can do something else and be patient it might be best not to bother with rewriting it to be parallel.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Local vs Parallel</h2>
+<p>
+Why stay local?
+<ul>
+<li>Need to redesign algorithm (but most 'ML' will already have distributed implementations)
+<li>Security and <b>privacy</b> (where are you sending the data? Is it private?)
+<li>Typically such environments are less reliable and less predictable.
+<li>Far more difficult to debug.
+<li>Managing the pipeline.
+<li>Shifting data to/from the servers might be a considerable bottleneck.
+</ul>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">(privacy detour)</h2>
+<p>
+<ul>
+<li>If your storing or processing a European citizen's 'personally identifiable information' on a server outside the EU there's a chance you're breaching data protection laws.
+<li>It might be that it's ok - it depends on the definition of who is the 'data controller' and 'storing'.
+<li>However, to avoid uncertainty, you might as well use a cloud computer within the EU (this will, typically, be slightly more expensive).
+<li>The relevant regulations are already in UK law, so this will still apply if the UK leaves, probably.
+<ul>
+</p>
+<p>
+<small>I'm not a lawyer, this is my best understanding of the situation!</small>
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">HPC vs the Cloud</h2>
 <p>
 Until now we've used the university's own HPC system.
@@ -59,14 +96,30 @@ Until now we've used the university's own HPC system.
 </section>
 
 
+
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;">Type of problem</h2>
+<h2 style="color:black;">The Cloud and Price</h2>
 <p>
-On the cloud one typically rents (virtual) hardware while you need it. This can lead to cost savings (also see spot pricing) - as one doesn't need to maintain or buy expensive compute resources which will quickly devalue. Often batch jobs require somewhat hacky scripts to collect together the results on HPC, while tools like dask let you run the whole operation from a single jupyter notebook as if the whole computation was local. Also very large clusters can be created briefly.
+<ul>
+<li>Typically you rent (virtual) hardware while you need it. <img src="assets/centre.jpg" align=right width=450 />
+<li>This can lead to cost savings (also see spot pricing) - as one doesn't need to maintain or buy expensive compute resources which will quickly devalue. <br/>
+<li>Also very large clusters can be created briefly.
+</ul></p>
+<p><small><a href="https://www.theatlantic.com/technology/archive/2016/01/amazon-web-services-data-center/423147/">where are Amazon's datacentres?</a></small>
+
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">The Cloud and Tools</h2>
+<p>
+Often HPC batch jobs require somewhat hacky scripts to collect together the results.<br/>On the cloud, tools like <b>dask</b> let you run the whole operation from a single jupyter notebook as if the whole computation was local.
 </p>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">The Cloud and Problems</h2>
+<p>
 <p>Problems include: accidental spend, security issues, unable to solve some types of problem, limited support.</p>
 </section>
-
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;"></h2>
@@ -84,13 +137,24 @@ On the cloud one typically rents (virtual) hardware while you need it. This can 
 <p>
 <img src="assets/mapreducelogo.png" width=200>
 <br/>
-<b>MapReduce</b> is both a model and a particular implementation of a method for running calculations on a large set of data. It consists of two stages:
+<b>MapReduce</b> is both a model and a particular implementation of a method for running calculations on a large set of data, where one can divide the problem into a series of mappings, shufflings and combining operations.
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">MapReduce</h2>
+<p>
+MapReduce consists of two stages:
 <ul>
 <li>A simple operation is carried out in parallel on all elements of a dataset (typically depends on the problem being embarrassingly parallel). This is the <b>map</b> stage.
 <li>The result of these simple operations are <b>shuffled</b> to be in the right locations and then are used to generate a result (the <b>reduce</b> stage). The hadoop implementation also includes a combiner (which sort of does partial reduction).
 </ul>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">MapReduce</h2>
+<p>
 A simple example is performing a <a href="https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html">word frequency count</a>. The map stage simply creates a set of tuples, pairing each word with a 1. The combiner and reducer stages then add these up. Because this is distributed, this can scale.
 </section>
+
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <img src="assets/mapreduce.png">
 </section>
@@ -112,31 +176,75 @@ A simple example is performing a <a href="https://hadoop.apache.org/docs/r1.2.1/
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">kubernetes</h2>
 <p>
-<img src="assets/Kubernetes.png">
+<img src="assets/Kubernetes.png" width=100>
 <br/>
-<b>kubernetes</b>
 <ul>
-<li>Organisers distributed containers. Alls automated application deployment.
+<li>Organises distributed containers (automated application deployment).
 <li>Means we don't have to connect to the nodes and faff with setting up stuff. This is all done for us.
 <li>Typically uses docker to manage this.
-<li>(<a href="https://www.youtube.com/watch?v=znhnDHAPCZE">video lecture</a> using kubernetes on google cloud)
 </ul>
+</p>
+<p>
+<small>(for interested students: <a href="https://www.youtube.com/watch?v=znhnDHAPCZE">lecture</a> using kubernetes on google cloud)</small>
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Service Models</h2>
+<p>
+There are different 'layers' available to the customer on the cloud, the trade off is typically complexity vs flexibility...
+</p>
+<p>Infrastructure as a Service, Platform as a Service, Software as a Service...</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Infrastructure as a Service</h2><p><b>IaaS</b></p>
+<p>
+The AWS EC2 system of instances is an example of <b>Infrastructure as a Service</b>.
+</p>
+<p>
+Typically a <b>hypervisor</b> (e.g. Xen) runs the virtual machines, storage is allocated, etc. You then have to install and run your own software on top of this.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Platform as a Service</h2><p><b>PaaS</b></p>
+<p>
+Fairly similar to IaaS, typically you provide software, but the service then starts up virtual machines, allocates storage, runs databases, etc that your software can use - without you needing to manage this.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Software as a Service</h2><p><b>(SaaS)</b></p>
+<p>
+You'll be familiar with things like google docs, etc - the software is provided as a cloud service.
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Infrastructure as Code</h2>
+<p>
+<ul>
+<li>Clicking lots of buttons to set up servers and software is slow and prone to mistakes, and hard to automate or repeat</li>
+<li>Instead we can define the computers, libraries, systems and software using code.
+</ul>
+</p>
 </section>
 
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">hadoop</h2>
 <p>
-<img src="assets/hadoop.png">
+<img src="assets/hadoop.svg" width=200>
 <br/>
 <b>hadoop</b> is a collection of tools. The main one we'll be interested in is its file system (the hadoop distributed file system, HDFS).<br/>
-Also includes YARN (scheduler) and a MapReduce implementation.
+<small>The Hadoop system also includes YARN (scheduler) and a MapReduce implementation.</small>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">docker</h2>
 <p>
-<img src="assets/docker.png">
+<img src="assets/docker.png" width=200>
 <br/>
 <b>docker</b> allows us to put all the software, libraries and configuration files that you need to run an application into a container.
 <ul>
@@ -146,26 +254,86 @@ Also includes YARN (scheduler) and a MapReduce implementation.
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">dask</h2>
+<p>
+<img src="assets/dask.svg" width=200>
+<br/>
+<b>dask</b> is a library for performing parallel computation for python. I've used it mainly for embarrassingly parallel problems. It makes distributing cross-validation or grid-searches for example very easy.
+<p>Show example</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS</h2>
+<p>Note: For the practical we'll be using Amazon Web Services. However the steps are similar in google cloud etc.</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS</h2>
+<p>Huge range of tools (<a href="https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Instances:sort=desc:tag:Name">link</a>)</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">AWS: Instances</h2>
 <p>
-For the practical we'll be using Amazon Web Services. However the steps are similar in google cloud etc.
 <br/>
-The computation on AWS is centred around virtual machines called <b>instances</b>. There are a huge range of configurations to select from now:
+The computation on AWS is centred around virtual machines called <b>instances</b>. There are a huge range of configurations to select from now. Typically they fall into a few categories...
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+<br/>
 <ul>
-<li><b>General purpose</b>. e.g. T2/T3: are cheap burstable instances: You get so much compute per hour, and can use it in bursts. For example the t3.nano gives you 10% time each hour. Ideal for maybe a low-traffic server.
-<li><b>Compute optimised</b>. Lots of CPU (largest instance c5.18xlarge with 72 virtual CPUs).
-<li><b>Memory optimised</b>. Many ML calculations require lots of memory (e.g. Gaussian processes). The r5a.24xlarge provides 768Gb of memory.
-<li><b>Accelerated computing</b>. Instances with lots of GPUs and memory.
+<li><b>General purpose</b>. these range in size considerably. Worth noting are the T2/T3 instances. These are cheap <b>burstable</b> instances. You get so much compute per hour. For example the t3.nano gives you 6 minutes each hour. Ideal for maybe a low-traffic web server? 
+<li>(cost as low as $0.0016/hour = £1.09/month, with VAT. There are also costs of moving data and storage though!)
 </ul>
 </section>
 
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+<br/>
+<ul>
+<li><b>Compute optimised</b>. Lots of CPU (largest instance c5.18xlarge with 72 virtual CPUs).
+</ul>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+<br/>
+<ul>
+<li><b>Memory optimised</b>. Many ML calculations require lots of memory (e.g. Gaussian processes). The r5a.24xlarge provides 768Gb of memory.
+<li>On-demand price about $5/hour.
+</ul>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Instances</h2>
+<p>
+<br/>
+<ul>
+<li><b>Accelerated computing</b>. Instances with lots of GPUs and memory.
+</ul>
+<p>Instances also come with different bandwidths - may be relevant if setting up a cluster for example.</p>
+</section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">AWS: Storage</h2>
 <p>
-There are many types of storage provided by AWS. They trade off price, reliability and speed.
+There are many types of storage provided by AWS. They trade off price, reliability and speed...
+</p>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Storage</h2>
+<p>
 <ul>
 <li>Amazon Glacier: Low cost, very slow access (hours)
+</ul>
+</p>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Storage</h2>
+<p>
+<ul>
 <li>Elastic Block Store: This is the type of storage you need in your EC2 instance.
 <ul>
 <li>slowest/cheapest: sc1 (simple HDD)
@@ -173,30 +341,43 @@ There are many types of storage provided by AWS. They trade off price, reliabili
 <li>solid-state: gp2 (general purpose SSD)
 <li>fast/expensive: io1
 </ul>
+</ul>
+</p>
+</section>
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Storage</h2>
+<p>
+<ul>
 <li>Amazon s3 (a simple storage service). Basic storage unit is a "bucket". Easy way of sharing data too (example <a href="https://openaq-data.s3.amazonaws.com/index.html">openaq data</a>). Looks a bit like a file system. Has API and CLI as does the rest of AWS.
 </ul>
-<a href="https://databricks.com/blog/2017/05/31/top-5-reasons-for-choosing-s3-over-hdfs.html">s3 vs hdfs</a>
 </p>
-
-
-
-<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;">AWS: Instances</h2>
-<p>
-When creating an instance you get to select the operating system and software installed. Or can use a custom image (which might also contain data and specific configuration).
-</p>
-<p>To reduce costs one could use spot pricing - this uses spare compute and a form of bidding. If the price goes above a threshold you set the instance is terminated.</p>
-<p>Instances also come with different bandwidths - may be relevant if setting up a cluster for example</p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
-<h2 style="color:black;">AWS: Other</h2>
+<h2 style="color:black;">AWS: Images</h2>
 <p>
-AWS Lambda
-autoscaling
-Amazon EMR
-Key pairs (use content from notebook)
-Security
+When creating an instance you get to select the operating system and software installed. Or can use a custom image (which might contain data and specific configuration). <a href="https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:">link</a>
+<img src="assets/aws4.png">
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Images</h2>
+<p>To reduce costs one could use <b>spot pricing</b> - this uses spare compute and a form of bidding. If the price goes above a threshold you set the instance is terminated.</p>
+<img src="assets/r5axlargespotprice.png" width=70%/>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda</b> allows you to put code on the cloud, without having to deal with running a server. The code is triggered by a variety of events, and can perform (basically) arbitrarily complex tasks in response. Typically stateless.</p>
+<p>show demo.</p>
+<a href="https://tutorials.botsfloor.com/run-facebook-messenger-chat-bot-on-aws-lambda-2fa800a67d76">reference for example</a>.
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: EMR</h2>
+AWS Elastic Map Reduce is a system for configuring (potentially autoscaling) clusters of computers. We'll cover this more in the practical so I won't mention it too much here.
 </p>
 </section>
 

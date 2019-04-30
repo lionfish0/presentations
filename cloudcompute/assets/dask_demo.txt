@@ -1,0 +1,72 @@
+daskec2lite --pathtokeyfile '/home/mike/.ssh/research.pem' --keyname 'research' --username 'mike' --imageid ami-19a58760 --sgid sg-9146afe9 --numinstances 6
+
+[COPY IP-ADDRESS]
+click remote scheduler
+
+nano .ssh/config
+(copy and paste in [IP-ADDRESS])
+
+ssh [IPADDRESS]
+>jupyter notebook --no-browser --port=8889
+(copy link)
+
+ssh -N -f -L localhost:8891:localhost:8889 mike@[IP-ADDRESS]
+
+(paste link, edit to 8891)
+
+new notebook
+
+
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+import sklearn
+import numpy as np
+
+X = np.random.randn(10000,1)*10
+Y = (np.sin(X/10)+X/10+np.random.randn(10000,1)*0.3)[:,0]
+
+
+
+
+plt.plot(X,Y,'.',markersize=1)
+
+
+
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
+
+def run_search(lengthscale,trainingX,trainingY,testX,testY):
+    kernel =  RBF(lengthscale, (1e-10, 1e10))
+    gp = GaussianProcessRegressor(kernel=kernel, optimizer=None,alpha=1.0)
+    gp.fit(trainingX, trainingY)
+    return np.mean(np.abs(gp.predict(testX)-testY))
+
+lengthscalestotest = 10**np.linspace(-5,5,100)
+#%timeit results = [run_search(lengthscale,X[0:500,:],Y[0:500],X[500:,:],Y[500:]) for lengthscale in lengthscalestotest]
+
+from dask.distributed import Client
+from dask import compute, delayed
+values = [delayed(run_search)(lengthscale,X[0:500,:],Y[0:500],X[500:,:],Y[500:]) for lengthscale in lengthscalestotest]
+client = Client("127.0.0.1:8786")
+%timeit results = compute(*values, scheduler='distributed')
+
+
+
+
+plt.plot(10**np.linspace(-5,5,100),np.array(results))
+ax = plt.gca()
+ax.set_xscale('log')
+
+===========================================================
+
+Terraform Demo
+- get the AMI for the latest Amazon ubuntu instance...
+
+aws ec2 describe-images --owners 099720109477 --filters 'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-????????' 'Name=state,Values=available' --output json | jq -r '.Images | sort_by(.CreationDate) | last(.[]).ImageId'
+
+(see in terratest)
+
+run:
+ terraform init
+ terraform apply
