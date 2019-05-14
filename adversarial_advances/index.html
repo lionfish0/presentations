@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Adversarial Examples: Background</title>
+
+<meta name="description" content="Adversarial Examples: Background">
+<meta name="author" content="Mike Smith">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/white.css" id="theme">
+<link rel="stylesheet" href="lib/css/zenburn.css">
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+    <div class="slides" data-background="assets/pres_bg.png">
+
+    <section data-background="assets/pres_bg.png">
+	    <h3>Adversarial Examples <br/>and Gaussian Processes</h3>
+	    <p>
+		    <small>Presented by Mike Smith, University of Sheffield</small><br/>
+            <small>michaeltsmith.org.uk</small>
+            <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
+            <small>@mikethomassmith</small>
+	    </p>
+    </section>
+
+
+    <section data-background="assets/pres_bg.png">
+	    <h2>Adversarial Examples</h2>
+	    <p>We take an image and add some carefully crafted noise.</p>
+        <img src="assets/dog_szegedy14.png" />
+        <p></p>
+        <p>Add the gradient (L-BFGS)</p>        
+        <p><small>Note: Noise image scaled by 10x. Dog becomes ostrich</small></p>
+
+        <p><small>Szegedy, et al. 2014 (original paper describing AEs)</small></p>
+    </section>
+    
+    <section data-background="assets/pres_bg.png">
+        <h2>Methods for creating AEs</h2>        
+        <h3>Jacobian Saliency Map algorithm - JSMA</h3>
+        
+        <p><img src="assets/papernot2016.png" align=right width=50%>Maximally perturb the feature (pixel) with greatest gradient (wrt class) [Papernot, 2016].
+        <br/>
+        <br/>They find they modify about 4% of pixels in MNIST to produce AEs.
+	     </p>
+	</section>
+    
+    <section data-background="assets/pres_bg.png">       
+    <h2>Universal Adversarial Examples</h2>
+    <p><small><img src="assets/universaladversarial.png" style="border:0px;" width=60%><br/>
+    Moosavi-Dezfooli, 2016</small></p>
+    </section>
+    
+    
+    <section>
+        <h2>Video Road Signs!</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1mJMPqi2bSQ?rel=0" frameborder="0" allowfullscreen></iframe>
+       <p><small>Evtimov, 2017 (published?)</small></p>
+    </section>    
+    
+    <section data-background="assets/pres_bg.png">
+        <h2>Defences Proposed</h2>
+        <p>Various ideas:</p>
+        <ul>
+        <li>Bradshaw et al. 2017 suggest adding a GP as a final layer.</li>
+        <li>Training on a set of adversarial examples to detect them (e.g. Grosse et al. 2017)</li>
+        <li>Feature selection (Zhang, 2016, Xu 2017). Also JPG compression (Dzuigaite, 2016).</li>
+        <li>Mess with activation functions, etc etc</li>
+        </ul> 
+    </section>
+
+    <section>
+    
+    <h2>My work</h2>
+    <ul>
+    <li>Considering a GP classifier.</li>
+    <li>$L_0$ norm.</li>
+    <li>Prove lower-bound on perturbation required for <b>confident</b> misclassification.</li>
+    </ul>
+    <p align=left><small>Note that I only use the posterior mean and not the posterior variance to determine if something is confidently classified.</small></p>
+    </section>    
+
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsS.png" width=70%> <p><small>Note: Placed confidence thresholds using data - so 90% of training data lies between boundaries. This allows us to control for the lengthscale etc of the classifier.</small></p></section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsT.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsU.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsV.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsW.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsX.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsY.png" width=70%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsZ.png" width=70%> </section>
+    
+        
+    
+ <section>
+    
+    <h2>Aim</h2>
+    <ul>
+    <li>Consider just <b>regression</b>.</li>
+    <li>We want to put a bound on the increase to the posterior moving along x-axis (+ve) will cause.</li>
+    <li>We consider four cases:</li>
+    <ol>
+      <li>Reaching Right hand edge of a box</li>
+      <li>Starting at left hand edge of a box</li>
+      <li>Crossing whole box</li>
+      <li>No constraint</li>            
+    </ol>  
+    </ul>
+    </section>       
+    
+
+    
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo</h2><img src="assets/demo1.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo</h2><img src="assets/demo2.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo</h2><img src="assets/demo3.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo</h2><img src="assets/demo4.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (to right)</h2><img src="assets/demo5.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (to right)</h2><img src="assets/demo6.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (to right)</h2><img src="assets/demo7.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left)</h2><img src="assets/demo8.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left)</h2><img src="assets/demo9.png"> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left)</h2><img src="assets/demo10.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left to right)</h2><img src="assets/demo11.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left to right)</h2><img src="assets/demo12.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (from left to right)</h2><img src="assets/demo13.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (any)</h2><img src="assets/demo14.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (any)</h2><img src="assets/demo15.png" width=50%> </section>
+<section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (any)</h2><img src="assets/demo16.png" width=50%> </section>
+
+<section>
+    <h2>Using these results</h2>
+    <img src="assets/algorithmv2.png" width=30%>
+    <ul>
+    <li>If we split our domain into three boxes.
+    <li>First consider if the perturbation started and finished in box A.
+    <li>We need to find the maximum of the 'any' condition for that box.
+    </ul>
+</section>
+
+<section>
+    <h2>Using these results</h2>
+    <img src="assets/democombined.png" width=30%>
+    <ul>
+    <li>We therefore need to sum over the three distributions caused by the training data.
+    <li>Note: PCA and other tricks used to make this work at higher dimensions.
+    </ul>
+</section>
+
+<section>
+    <h2>PCA Trick</h2>
+    <img src="assets/lowrank.png" width=60%>
+    <ul>
+    <li>Only works if non-negative...</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Dealing with negatives</h2>
+    <img src="assets/negativetrick.png" width=60%>
+    <ul>
+    <li>Before applying PCA, merge negative points with positive ones.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Using these results</h2>
+    <img src="assets/algorithmv2b.png" width=30%>
+    <ul>
+    <li>Need to repeat for other combinations...
+    </ul>
+</section>
+
+<section>
+    <h2>Using these results</h2>
+    <img src="assets/algorithmv2c.png" width=30%>
+    <ul>
+    <li>Need to repeat for other combinations...
+    </ul>
+</section>
+
+<section>
+    <h2>Using these results</h2>
+    <img src="assets/algorithmv2d.png" width=30%>
+    <ul>
+    <li>Need to repeat for other combinations...
+    <li>For this we first add together the result for 'to right boundary' from A and 'from left boundary' from B.
+    <li>And so on...
+    <li>Also need to consider multiple dimensions.
+    </ul>
+</section>
+
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>Small MNIST 3v5</h2><img src="assets/demo19.png" width=70%> </section>    
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>Synthetic</h2><img src="assets/demo20.png" width=40%> </section>    
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>Credit</h2><img src="assets/demo21.png" width=70%> </section>        
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>15 $\times$ 15 MNIST + Sparse</h2><img src="assets/bigmnist.png" width=40%></section>    
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>Creating Attacks</h2><img src="assets/perturbations.png" width=40%><br/><p>Needed a modified attack to reach threshold.</p><small>Reach 95th-percentile</small></section>    
+    <section data-background="assets/pres_bg.png" data-transition="none"><h2>Thoughts & Thanks</h2><p>Response to lengthscale<br/>Could it be applied to deep GPs?<br/>Other kernels?<br/>Optimise + how to get to higher dimensions?<br/></p><p>This tool works by combining several tricks for tightening the bounds, lots more probably exist.</p>
+    <p><b>Thanks</b></p>
+    <ul><li>Co-authors: Kathrin Grosse (CISPA Helmholtz Center, Saarland) & Mauricio A Alvarez Lopez (Sheffield).
+    <li>Helpful colleagues: Fariba Yousefi & Wil Ward (Sheffield)
+    <li>Funders: The EPSRC Project EP/N014162/1.</p>
+    </section>        
+            
+            
+        
+    
+    <section data-background="assets/pres_bg.png">
+        <p><small>Szegedy, Christian, et al. "Intriguing properties of neural networks." arXiv preprint arXiv:1312.6199 (2013).</small></p>
+        <p><small>Nguyen, Anh, Jason Yosinski, and Jeff Clune. "Deep neural networks are easily fooled: High confidence predictions for unrecognizable images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015.</small></p>
+        <p><small>Fischer, Volker, et al. "Adversarial Examples for Semantic Image Segmentation." arXiv preprint arXiv:1703.01101 (2017).</small></p>
+        <p><small>Goodfellow, Ian J., Jonathon Shlens, and Christian Szegedy. "Explaining and harnessing adversarial examples." arXiv preprint arXiv:1412.6572 (2014).</small></p>
+        <p><small>Fawzi, Alhussein, Omar Fawzi, and Pascal Frossard. "Analysis of classifiers' robustness to adversarial perturbations." arXiv preprint arXiv:1502.02590 (2015).</small></p>
+        <p><small>Tabacof, Pedro, and Eduardo Valle. "Exploring the space of adversarial images." Neural Networks (IJCNN), 2016 International Joint Conference on. IEEE, 2016.</small></p>
+        <p><small>Papernot, Nicolas, Patrick McDaniel, and Ian Goodfellow. "Transferability in machine learning: from phenomena to black-box attacks using adversarial samples." arXiv preprint arXiv:1605.07277 (2016).</small></p>                
+        <p><small>Moosavi-Dezfooli, Seyed-Mohsen, et al. "Universal adversarial perturbations." arXiv preprint arXiv:1610.08401 (2016).</small></p>
+        <p><small>Alexey, Goodfellow, and Bengio. "Adversarial examples in the physical world." arXiv preprint arXiv:1607.02533 (2016).</small></p>
+        <p><small>Evtimov, Ivan, et al. "Robust physical-world attacks on machine learning models." arXiv preprint arXiv:1707.08945 (2017).</small></p>
+        <p><small>Papernot, Nicolas, et al. "The limitations of deep learning in adversarial settings." Security and Privacy (EuroS&P), 2016 IEEE European Symposium on. IEEE, 2016b.</small></p>
+        <p><small>Papernot, Nicolas, et al. "Practical black-box attacks against machine learning." Proceedings of the 2017 ACM on Asia Conference on Computer and Communications Security. ACM, 2017.</small></p>
+        <p><small>Carlini, Nicholas, and David Wagner. "Towards evaluating the robustness of neural networks." Security and Privacy (SP), 2017 IEEE Symposium on. IEEE, 2017.</small></p>
+        <p><small>Su, Jiawei, Danilo Vasconcellos Vargas, and Sakurai Kouichi. "One pixel attack for fooling deep neural networks." arXiv preprint arXiv:1710.08864 (2017).</small></p>
+        <p><small>L. Huang, A. D. Joseph, B. Nelson, B. I. P. Rubinstein, and J. D.
+Tygar, “Adversarial machine learning,” in Proceedings of the 4th ACM
+Workshop on Security and Artificial Intelligence, AISec 2011, Chicago,
+IL, USA, October 21, 2011, 2011, pp. 43–58. [Online]. Available:
+http://doi.acm.org/10.1145/2046684.2046692</small></p>
+<p><small> K. Grosse, P. Manoharan, N. Papernot, M. Backes, and P. McDaniel, “On
+the (Statistical) Detection of Adversarial Examples,” ArXiv e-prints, Feb.
+2017
+        
+        <p><small>J. Bradshaw, A. G. d. G. Matthews, and Z. Ghahramani, “Adversar-
+ial Examples, Uncertainty, and Transfer Testing Robustness in Gaussian
+Process Hybrid Deep Networks,” ArXiv e-prints, Jul. 2017.</small></p>
+
+<p><small>F. Zhang, P. Chan, B. Biggio, D. Yeung, and F. Roli, “Adversarial fea-
+ture selection against evasion attacks,” IEEE Transactions on Cybernetics,
+vol. 46, pp. 766–777, 2016.</small></p>
+
+<p><small>W. Xu, D. Evans, and Y. Qi, “Feature Squeezing: Detecting Adversarial
+Examples in Deep Neural Networks,” ArXiv e-prints, Apr. 2017.</small></p>
+
+<p><small>G. K. Dziugaite, Z. Ghahramani, and D. M. Roy, “A study of the effect of
+jpg compression on adversarial images,” arXiv preprint arXiv:1608.00853,
+2016.</small></p>
+    
+    </section>
+ 
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+math: {
+mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+},
+
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+// Optional reveal.js plugins
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/notes/notes.js', async: true },
+{ src: 'plugin/math/math.js', async: true }
+]
+});
+
+</script>
+
+</body>
+</html>
