@@ -1,5 +1,9 @@
 # Links to talks
 
+## Adversarial Bounds
+
+For Advances in Data Science 2019 <a href="https://lionfish0.github.io/presentations/adversarial_advances/">here</a>
+
 ## Cloud Computing Course
 
 2019 <a href="https://lionfish0.github.io/presentations/cloudcompute/#/">here</a>.	
