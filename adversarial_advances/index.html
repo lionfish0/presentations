@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8">
 
-<title>Adversarial Examples: Background</title>
+<title>Adversarial Samples</title>
 
-<meta name="description" content="Adversarial Examples: Background">
+<meta name="description" content="Adversarial Samples">
 <meta name="author" content="Mike Smith">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,8 +27,8 @@
 <div class="reveal">
     <div class="slides" data-background="assets/pres_bg.png">
 
-    <section data-background="assets/pres_bg.png">
-	    <h3>Adversarial Examples <br/>and Gaussian Processes</h3>
+    <section data-background="assets/pres_bg.png" data-transition="none">
+	    <h3>Adversarial Samples <br/>and Gaussian Processes</h3>
 	    <p>
 		    <small>Presented by Mike Smith, University of Sheffield</small><br/>
             <small>michaeltsmith.org.uk</small>
@@ -38,52 +38,52 @@
     </section>
 
 
-    <section data-background="assets/pres_bg.png">
-	    <h2>Adversarial Examples</h2>
+    <section data-background="assets/pres_bg.png" data-transition="none">
+	    <h2>Adversarial Sample</h2>
 	    <p>We take an image and add some carefully crafted noise.</p>
         <img src="assets/dog_szegedy14.png" />
         <p></p>
         <p>Add the gradient (L-BFGS)</p>        
         <p><small>Note: Noise image scaled by 10x. Dog becomes ostrich</small></p>
 
-        <p><small>Szegedy, et al. 2014 (original paper describing AEs)</small></p>
+        <p><small>Szegedy, et al. 2014 (original paper describing AS in DNNs)</small></p>
+        <p><small></small></p>
     </section>
     
-    <section data-background="assets/pres_bg.png">
-        <h2>Methods for creating AEs</h2>        
-        <h3>Jacobian Saliency Map algorithm - JSMA</h3>
+    <section data-background="assets/pres_bg.png" data-transition="none">
+        <h2>Jacobian Saliency Map algorithm - JSMA</h2>
         
         <p><img src="assets/papernot2016.png" align=right width=50%>Maximally perturb the feature (pixel) with greatest gradient (wrt class) [Papernot, 2016].
         <br/>
-        <br/>They find they modify about 4% of pixels in MNIST to produce AEs.
+        <br/>They find they modify about 4% of pixels in MNIST to produce an Adversarial Sample.
 	     </p>
 	</section>
     
-    <section data-background="assets/pres_bg.png">       
-    <h2>Universal Adversarial Examples</h2>
+    <section data-background="assets/pres_bg.png" data-transition="none">       
+    <h2>Universal Adversarial Samples</h2>
     <p><small><img src="assets/universaladversarial.png" style="border:0px;" width=60%><br/>
     Moosavi-Dezfooli, 2016</small></p>
     </section>
     
     
-    <section>
+    <section data-transition="none">
         <h2>Video Road Signs!</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1mJMPqi2bSQ?rel=0" frameborder="0" allowfullscreen></iframe>
        <p><small>Evtimov, 2017 (published?)</small></p>
     </section>    
     
-    <section data-background="assets/pres_bg.png">
+    <section data-background="assets/pres_bg.png" data-transition="none">
         <h2>Defences Proposed</h2>
         <p>Various ideas:</p>
         <ul>
         <li>Bradshaw et al. 2017 suggest adding a GP as a final layer.</li>
-        <li>Training on a set of adversarial examples to detect them (e.g. Grosse et al. 2017)</li>
+        <li>Training on a set of adversarial samples to detect them (e.g. Grosse et al. 2017)</li>
         <li>Feature selection (Zhang, 2016, Xu 2017). Also JPG compression (Dzuigaite, 2016).</li>
         <li>Mess with activation functions, etc etc</li>
         </ul> 
     </section>
 
-    <section>
+    <section data-background="assets/pres_bg.png" data-transition="none">
     
     <h2>My work</h2>
     <ul>
@@ -94,7 +94,7 @@
     <p align=left><small>Note that I only use the posterior mean and not the posterior variance to determine if something is confidently classified.</small></p>
     </section>    
 
-<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsS.png" width=70%> <p><small>Note: Placed confidence thresholds using data - so 90% of training data lies between boundaries. This allows us to control for the lengthscale etc of the classifier.</small></p></section>
+<section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsS.png" width=70%> <p style="position:fixed;"><small>Note: Placed confidence thresholds using data - so 90% of training data lies between boundaries. This allows us to control for the lengthscale etc of the classifier.</small></p></section>
 <section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsT.png" width=70%> </section>
 <section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsU.png" width=70%> </section>
 <section data-background="assets/pres_bg.png" data-transition="none"><img src="assets/setsV.png" width=70%> </section>
@@ -105,11 +105,11 @@
     
         
     
- <section>
+ <section data-background="assets/pres_bg.png" data-transition="none">
     
     <h2>Aim</h2>
     <ul>
-    <li>Consider just <b>regression</b>.</li>
+    <li>We treat problem as just <b>regression</b>.</li>
     <li>We want to put a bound on the increase to the posterior moving along x-axis (+ve) will cause.</li>
     <li>We consider four cases:</li>
     <ol>
@@ -140,7 +140,7 @@
 <section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (any)</h2><img src="assets/demo15.png" width=50%> </section>
 <section data-background="assets/pres_bg.png" data-transition="none"><h2>Demo (any)</h2><img src="assets/demo16.png" width=50%> </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Using these results</h2>
     <img src="assets/algorithmv2.png" width=30%>
     <ul>
@@ -150,7 +150,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Using these results</h2>
     <img src="assets/democombined.png" width=30%>
     <ul>
@@ -159,7 +159,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>PCA Trick</h2>
     <img src="assets/lowrank.png" width=60%>
     <ul>
@@ -167,7 +167,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Dealing with negatives</h2>
     <img src="assets/negativetrick.png" width=60%>
     <ul>
@@ -175,7 +175,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Using these results</h2>
     <img src="assets/algorithmv2b.png" width=30%>
     <ul>
@@ -183,7 +183,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Using these results</h2>
     <img src="assets/algorithmv2c.png" width=30%>
     <ul>
@@ -191,7 +191,7 @@
     </ul>
 </section>
 
-<section>
+<section data-background="assets/pres_bg.png" data-transition="none">
     <h2>Using these results</h2>
     <img src="assets/algorithmv2d.png" width=30%>
     <ul>
@@ -217,16 +217,16 @@
             
         
     
-    <section data-background="assets/pres_bg.png">
+    <section data-background="assets/pres_bg.png" data-transition="none">
         <p><small>Szegedy, Christian, et al. "Intriguing properties of neural networks." arXiv preprint arXiv:1312.6199 (2013).</small></p>
         <p><small>Nguyen, Anh, Jason Yosinski, and Jeff Clune. "Deep neural networks are easily fooled: High confidence predictions for unrecognizable images." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015.</small></p>
-        <p><small>Fischer, Volker, et al. "Adversarial Examples for Semantic Image Segmentation." arXiv preprint arXiv:1703.01101 (2017).</small></p>
-        <p><small>Goodfellow, Ian J., Jonathon Shlens, and Christian Szegedy. "Explaining and harnessing adversarial examples." arXiv preprint arXiv:1412.6572 (2014).</small></p>
+        <p><small>Fischer, Volker, et al. "Adversarial Samples for Semantic Image Segmentation." arXiv preprint arXiv:1703.01101 (2017).</small></p>
+        <p><small>Goodfellow, Ian J., Jonathon Shlens, and Christian Szegedy. "Explaining and harnessing adversarial samples." arXiv preprint arXiv:1412.6572 (2014).</small></p>
         <p><small>Fawzi, Alhussein, Omar Fawzi, and Pascal Frossard. "Analysis of classifiers' robustness to adversarial perturbations." arXiv preprint arXiv:1502.02590 (2015).</small></p>
         <p><small>Tabacof, Pedro, and Eduardo Valle. "Exploring the space of adversarial images." Neural Networks (IJCNN), 2016 International Joint Conference on. IEEE, 2016.</small></p>
         <p><small>Papernot, Nicolas, Patrick McDaniel, and Ian Goodfellow. "Transferability in machine learning: from phenomena to black-box attacks using adversarial samples." arXiv preprint arXiv:1605.07277 (2016).</small></p>                
         <p><small>Moosavi-Dezfooli, Seyed-Mohsen, et al. "Universal adversarial perturbations." arXiv preprint arXiv:1610.08401 (2016).</small></p>
-        <p><small>Alexey, Goodfellow, and Bengio. "Adversarial examples in the physical world." arXiv preprint arXiv:1607.02533 (2016).</small></p>
+        <p><small>Alexey, Goodfellow, and Bengio. "Adversarial samples in the physical world." arXiv preprint arXiv:1607.02533 (2016).</small></p>
         <p><small>Evtimov, Ivan, et al. "Robust physical-world attacks on machine learning models." arXiv preprint arXiv:1707.08945 (2017).</small></p>
         <p><small>Papernot, Nicolas, et al. "The limitations of deep learning in adversarial settings." Security and Privacy (EuroS&P), 2016 IEEE European Symposium on. IEEE, 2016b.</small></p>
         <p><small>Papernot, Nicolas, et al. "Practical black-box attacks against machine learning." Proceedings of the 2017 ACM on Asia Conference on Computer and Communications Security. ACM, 2017.</small></p>
