@@ -34,3 +34,7 @@ Mike Croucher's compacted RSE talk <a href="https://lionfish0.github.io/presenta
 
 Classification <a href="https://lionfish0.github.io/presentations/DSA_Classification_talk">here</a>.	
 
+## DSA 2019
+
+Classification 2019 <a href="https://lionfish0.github.io/presentations/DDSA2019_Classification_talk">here</a>.	
+
