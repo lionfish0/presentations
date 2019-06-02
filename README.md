@@ -36,5 +36,5 @@ Classification <a href="https://lionfish0.github.io/presentations/DSA_Classifica
 
 ## DSA 2019
 
-Classification 2019 <a href="https://lionfish0.github.io/presentations/DDSA2019_Classification_talk">here</a>.	
+Classification 2019 <a href="https://lionfish0.github.io/presentations/DSA2019_Classification_talk">here</a>.	
 
