@@ -2,6 +2,7 @@
 
 ## Adversarial Bounds
 
+Background short talk to group <a href="https://lionfish0.github.io/presentations/adversarial/">here</a>
 For Advances in Data Science 2019 <a href="https://lionfish0.github.io/presentations/adversarial_advances/">here</a>
 
 ## Cloud Computing Course
