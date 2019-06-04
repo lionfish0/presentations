@@ -2,6 +2,7 @@
 
 ## Adversarial Bounds
 
+Background short talk to group <a href="https://lionfish0.github.io/presentations/adversarial/">here</a>
 For Advances in Data Science 2019 <a href="https://lionfish0.github.io/presentations/adversarial_advances/">here</a>
 
 ## Cloud Computing Course
@@ -33,4 +34,8 @@ With classification etc <a href="https://lionfish0.github.io/presentations/dp4gp
 Mike Croucher's compacted RSE talk <a href="https://lionfish0.github.io/presentations/DSA_crouchers_talk_short">here</a>.
 
 Classification <a href="https://lionfish0.github.io/presentations/DSA_Classification_talk">here</a>.	
+
+## DSA 2019
+
+Classification 2019 <a href="https://lionfish0.github.io/presentations/DSA2019_Classification_talk">here</a>.	
 
