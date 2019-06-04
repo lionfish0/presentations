@@ -42,11 +42,12 @@
 			<div class="slides" data-background="assets/pres_bg.png">
                 
 				<section data-background="assets/pres_bg.png">
-                    <h3>What is</h3>
+                    
 					<h1>Classification?</h1>
 					<p>
 						<small>Presented by Mike Smith</small><br/>
-                        <small><a href="mailto:mike@michaeltsmith.org.uk">mike@michaeltsmith.org.uk</a></small>
+						<small>RA at the University of Sheffield</small>
+                        <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>
 					</p>
 				</section>
 
@@ -76,6 +77,7 @@
                     <li>Feature selection example: Sickle Cell
                     <li>Imbalanced Data
                     <li>Detour: F-score (what is it?)
+                    <li>Adversarial Examples   </ul>
 					</ul>
 					</p>
 				</section>
@@ -349,10 +351,115 @@ What is the Recall (detected true positives/all <b>real</b> positives)? <br/><b>
 <p>Issue: weights precision and recall equally.</p>
 </section>
 
+    <section data-background="assets/pres_bg.png">
+	    <h2>Adversarial Examples</h2>
+	    <p>We take an image and add some carefully crafted noise.</p>
+        <img src="assets/dog_szegedy14.png" />
+        <p>Dog becomes ostrich</p>
+        <p><small>Note: Noise image scaled by 10x</small></p>
+        <p><small>Szegedy, et al. 2014 (original paper describing AEs)</small></p>
+    </section>
+
+    <section data-background="assets/pres_bg.png">
+	    <h2>Uh oh...</h2>
+        <img src="assets/uhoh.png" width=70% />
+        <p><i>Note:</i> These are examples of 'test-time' attacks (we're altering the test image not the training data)</p>
+        <p><small>Fischer, 2017</small></p>
+    </section>
+    
+    <section data-background="assets/pres_bg.png">
+	    <h2>Normal DNN training</h2>
+	    <ul>
+	    <li>Take an image and compute the class scores using a function which has <b>millions of parameters</b>.</li>
+	    <li>For each parameter find how much it changes the output scores (the gradient of a cost fn wrt each weight).</li>
+	    <li>Change weights to make correct class have higher score.</li>
+	    <li>Repeat lots and lots of times.</li>
+	    </ul>
+	    <img src="assets/network.png" style="border:0px;">
+        <p><small>based on http://karpathy.github.io/2015/03/30/breaking-convnets/</small></p>
+    </section>
+    
+    <section data-background="assets/pres_bg.png">
+	    <h2>Creating Adversarial Example</h2>
+	    <ul>
+	    <li>Take an image and compute the class scores.</li>
+	    <li>For each <b>input</b> find how much it changes the output scores (the gradient of the score wrt each <b>input</b>).</li>
+	    <li>Change <b>inputs</b> to make correct class have <b>lower</b> score.</li>
+	    </ul>
+	    <img src="assets/network.png" style="border:0px;">
+        <p><small>based on http://karpathy.github.io/2015/03/30/breaking-convnets/</small></p>
+        <p><small>The noise must be crafted, e.g. Fawzi, 2015 show the difference between random noise and an adversarial example.</small></p>
+    </section>     
+
+    <section data-background="assets/pres_bg.png">
+        <h2>Methods for creating AEs</h2>        
+        <h3>Jacobian Saliency Map algorithm - JSMA</h3>
+        
+        <p><img src="assets/papernot2016.png" align=right width=50%>Maximally perturb the feature (pixel) with greatest gradient (wrt class) [Papernot, 2016].
+        <br/>
+        <br/>They find they modify about 4% of pixels in MNIST to produce AEs.
+	     </p>
+	</section>
+    <section data-background="assets/pres_bg.png">	     
+        <h2>Others</h2>
+        <p><b>Attack specific L-Norm</b>. Carlini, 2017: Good overview - basically the last two are just different norms.</p>   
+        <p><b>Fast Gradient Sign Method</b>. Changes all pixels simultaneously, but by either $\pm\epsilon$.</p>
+        <p><b>Black Box</b>. Papernot 2017, train a DNN on the classifications of a black-box classifier. AEs produced on their new emulation worked against the target (e.g. Amazon and Google's image recognition systems).</p>
+        <p><b>Blackbox+Genetic Algorithm</b>. Su et al., 2017: single pixels. I'm not clear why we can't just check each pixel?</p>
+    </section>    
+
+    <section data-background="assets/pres_bg.png">
+        <h2>Transferability</h2>
+        <p><img src="assets/crosstechnique.png" style="border:0px;" width=60% align="right">Adversarial Sample created on row ML-technique and then they were tested on the column technique.
+        </p>
+        <p><small>Papernot 2016</small></p>
+    </section> 
+  
+    <section data-background="assets/pres_bg.png">       
+    <h2>Universal Adversarial Examples</h2>
+    <p><small><img src="assets/universaladversarial.png" style="border:0px;" width=60%><br/>
+    Moosavi-Dezfooli, 2016</small></p>
+    </section>
+    
+    <section data-background="assets/pres_bg.png">
+        <h2>Printing!</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zQ_uMenoBCk?rel=0" frameborder="0" allowfullscreen></iframe>       
+       <p><small>Alexey, 2016</small></p>
+    </section>
+    
+    <section data-background="assets/pres_bg.png">
+        <h2>Video Road Signs!</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1mJMPqi2bSQ?rel=0" frameborder="0" allowfullscreen></iframe>
+       <p><small>Evtimov, 2017 (published?)</small></p>
+    </section>    
+    
+   
+    <section data-background="assets/pres_bg.png">
+        <h2>Why does it happen?</h2>
+        <p>Originally people suggested 'overfitting', but it may be more to do with the linear nature of the classifier.
+        </p>
+        <img src="assets/goodfellowabstract.png" style="border:0px;" width="80%">
+        <p><small>Goodfellow, 2014</small></p>
+    </section>
+       
+    
+    <section data-background="assets/pres_bg.png">
+        <h2>Defences Proposed</h2>
+        <p>Various ideas:</p>
+        <ul>
+        <li>Bradshaw et al. 2017 suggest adding a GP as a final layer.</li>
+        <li>Training on a set of adversarial examples to detect them (e.g. Grosse et al. 2017)</li>
+        <li>Feature selection (Zhang, 2016, Xu 2017). Also JPG compression (Dzuigaite, 2016).</li>
+        <li>Mess with activation functions, etc etc</li>
+        </ul>
+      
+    </section>
+    
+
 <section data-background="assets/pres_bg.png">
 <h2>Summary</h2>
 <ul>
-<li>classification is supervised learning.
+<li>Classification is supervised learning.
 <li>Example: Malnutrition (MUAC/z-score)
 <li>Nearest neighbour vs decision boundary
 <li>Cross validation (be careful with correlated training data)
@@ -361,6 +468,7 @@ What is the Recall (detected true positives/all <b>real</b> positives)? <br/><b>
 <li>Feature selection example: Sickle Cell
 <li>Imbalanced Data
 <li>Detour: F-score
+<li>Adversarial Examples
 </ul>
 </section>
 </div>
