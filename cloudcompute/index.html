@@ -40,7 +40,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">ML and Cloud Computing</h2>
 <p>
-Dr. Mike Smith, University of Sheffield<br/></p><p>
+Mike Smith, University of Sheffield<br/></p><p>
 <small>michaeltsmith.org.uk</small>
 <small><a href="mailto:m.t.smith@sheffield.ac.uk">m.t.smith@sheffield.ac.uk</a></small>                         
 <small>@mikethomassmith</small>
@@ -75,10 +75,9 @@ Why stay local?
 <h2 style="color:black;">(privacy detour)</h2>
 <p>
 <ul>
-<li>If your storing or processing a European citizen's 'personally identifiable information' on a server outside the EU there's a chance you're breaching data protection laws.
-<li>It might be that it's ok - it depends on the definition of who is the 'data controller' and 'storing'.
-<li>However, to avoid uncertainty, you might as well use a cloud computer within the EU (this will, typically, be slightly more expensive).
-<li>The relevant regulations are already in UK law, so this will still apply if the UK leaves, probably.
+<li>If your storing/processing EU citizen's 'personally identifiable information' on a server outside the EU there's a chance you're breaching data protection law. It depends who is the 'data controller'. This applies during the current 'transition period'.
+<li>You might as well use a cloud computer within the EU (typically, slightly more expensive).
+<li>From the ICO: It depends on negotiations. The default position: the GDPR will be brought into UK law as the ‘UK GDPR’, but there are particular issues such as UK-EU transfers, etc.
 <ul>
 </p>
 <p>
@@ -253,7 +252,7 @@ Terraform is an IaC tool.
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">hadoop</h2>
 <p>
-<img src="assets/hadoop.svg" width=200>
+<img src="assets/hadoop-logo.jpg" />
 <br/>
 <b>hadoop</b> is a collection of tools. The main one we'll be interested in is its file system (the hadoop distributed file system, HDFS).<br/>
 <small>The Hadoop system also includes YARN (scheduler) and a MapReduce implementation.</small>
@@ -276,8 +275,8 @@ Terraform is an IaC tool.
 <p>
 <img src="assets/dask.svg" width=200>
 <br/>
-<b>dask</b> is a library for performing parallel computation for python. I've used it mainly for embarrassingly parallel problems. It makes distributing cross-validation or grid-searches for example very easy.
-<p>(show example)</p>
+<b>dask</b> is a library for performing parallel computation for python. I've used it mainly for embarrassingly parallel problems. Good for distributing cross-validation or grid-searches.
+<p><small>Update: A new tool: "Terality" is a commercial tool that acts as a swap-in replacement for pandas (a popular data manipulation/analysis tool for python), for compute on the cloud. Many other similar offerings exist - this lecture is not exhaustive!</small></p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -295,6 +294,8 @@ Terraform is an IaC tool.
 <p>
 <br/>
 The computation on AWS is centred around virtual machines called <b>instances</b>. There are a huge range of configurations to select from now. Typically they fall into a few categories...
+</p>
+<p><small>(<a href="https://aws.amazon.com/ec2/instance-types/">Instance Types</a>)</small></p>
 </section>
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">AWS: Instances</h2>
@@ -311,7 +312,7 @@ The computation on AWS is centred around virtual machines called <b>instances</b
 <p>
 <br/>
 <ul>
-<li><b>Compute optimised</b>. Lots of CPU (largest instance c5.18xlarge with 72 virtual CPUs).
+<li><b>Compute optimised</b>. Lots of CPU (largest instance c6a.metal with 192 CPUs and 384Gb of memory). [about $10/hour]
 </ul>
 </section>
 
@@ -320,8 +321,9 @@ The computation on AWS is centred around virtual machines called <b>instances</b
 <p>
 <br/>
 <ul>
-<li><b>Memory optimised</b>. Many ML calculations require lots of memory (e.g. Gaussian processes). The r5a.24xlarge provides 768Gb of memory.
-<li>On-demand price about $5/hour.
+<li><b>Memory optimised</b>. Many ML calculations require lots of memory (e.g. Gaussian processes). </li>
+<li>x2iedn.32xlarge provides 4,096Gb of memory at $26/hour.
+<li>There are also 'high memory instances', u-24tb1.metal has 24,576Gb of RAM. 224 core. [cost probably $1M/year?]
 </ul>
 </section>
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -391,6 +393,80 @@ When creating an instance you get to select the operating system and software in
 <b>AWS Lambda</b> allows you to put code on the cloud, without having to deal with running a server. The code is triggered by a variety of events, and can perform basic tasks in response. Typically stateless.</p>
 <p>(show demo).</p>
 <a href="https://tutorials.botsfloor.com/run-facebook-messenger-chat-bot-on-aws-lambda-2fa800a67d76">reference for example</a>.
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b> </p><p>In twos/threes can you think of some real applications of Lambda?</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li><b>Logging / IoT</b> One example: data in the <a href="https://openaq-fetches.s3.amazonaws.com/index.html">OpenAQ dataset</a> has all the sensors across the world merged into files for each day (hard to pick out history of one sensor). As new data arrives it could be parsed by the lambda into appropriate separate files?
+</ul></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li>Logging / IoT
+<li><b>Automated backups</b> (e.g. an hourly script run <b>and</b> checking the backups!)</li>
+</ul></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li>Logging / IoT
+<li>Automated backups</li>
+<li><b>ML deployment</b> (e.g. Refresh air pollution map every 10 minutes)</li>
+</ul></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li><b>Logging / IoT</b>
+<li>Automated backups</li>
+<li>ML deployment</li>
+<li><b>Media conversion</b> (E.g. managing the deployment of infrastructure, <a href="https://www.youtube.com/watch?v=hU25CIRPIJo">Netflix</a>).   
+</ul></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li><b>Logging / IoT</b>
+<li>Automated backups</li>
+<li>ML deployment</li>
+<li>Media conversion</li>  
+<li><b>Websites</b>: For low traffic sites with some scripts/backend that needs running lambda means you can write custom code without needing a server!
+</ul></p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">AWS: Lambda</h2>
+<p>
+<b>AWS Lambda: uses?</b>
+<ul>
+<li>Logging / IoT
+<li>Automated backups</li>
+<li>ML deployment</li>
+<li>Media conversion</li>  
+<li>Websites</li>
+</ul></p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
