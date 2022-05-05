@@ -50,11 +50,24 @@ Mike Smith, University of Sheffield<br/></p><p>
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
+<h2 style="color:black;">Today...</h2>
+<p>
+<ul>
+<li>When to distribute
+<li>Some common tools
+<li>AWS: components
+<li>AWS: Lambda
+</ul>
+</p>
+</section>
+
+<section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">Local vs Parallel</h2>
 <p>
 <b>It's not always worth parallelising your application!</b><br/>
 Human time is worth more than compute, so if you can do something else and be patient it might be best not to bother with rewriting it to be parallel.
 </p>
+<img src="assets/laptop.png" height=100 /> <img src="assets/internet.png" height=100 />
 </section>
 
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -75,9 +88,9 @@ Why stay local?
 <h2 style="color:black;">(privacy detour)</h2>
 <p>
 <ul>
-<li>If your storing/processing EU citizen's 'personally identifiable information' on a server outside the EU there's a chance you're breaching data protection law. It depends who is the 'data controller'. This applies during the current 'transition period'.
+<li>Careful not to store/process EU citizen's personally identifiable information on a server outside the EU.
 <li>You might as well use a cloud computer within the EU (typically, slightly more expensive).
-<li>From the ICO: It depends on negotiations. The default position: the GDPR will be brought into UK law as the ‘UK GDPR’, but there are particular issues such as UK-EU transfers, etc.
+<li>From the ICO: It depends on negotiations. The default position: the GDPR will be brought into UK law.
 <ul>
 </p>
 <p>
@@ -111,7 +124,10 @@ Until now we've used the university's own HPC system.
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
 <h2 style="color:black;">The Cloud and Tools</h2>
 <p>
-Often HPC batch jobs require somewhat hacky scripts to collect together the results.<br/>On the cloud, tools like <b>dask</b> let you run the whole operation from a single jupyter notebook as if the whole computation was local.
+<ul>
+<li>Previously HPC batch jobs require somewhat hacky scripts to collect together the results.
+<li>Now most HPCs use <a href="https://slurm.schedmd.com/documentation.html">SLURM</a> (includes tools like job array, which let you run embarrassingly parallel arrays of jobs).
+<li>On the cloud, tools like <b>dask</b> let you run the whole operation from a single jupyter notebook as if the whole computation was local.
 </p>
 </section>
 <section data-background="assets/pres_bg_bb_inv.png" style="color:black;">
@@ -447,7 +463,7 @@ When creating an instance you get to select the operating system and software in
 <p>
 <b>AWS Lambda: uses?</b>
 <ul>
-<li><b>Logging / IoT</b>
+<li>Logging / IoT
 <li>Automated backups</li>
 <li>ML deployment</li>
 <li><b>Media conversion</b> (E.g. managing the deployment of infrastructure, <a href="https://www.youtube.com/watch?v=hU25CIRPIJo">Netflix</a>).   
@@ -459,7 +475,7 @@ When creating an instance you get to select the operating system and software in
 <p>
 <b>AWS Lambda: uses?</b>
 <ul>
-<li><b>Logging / IoT</b>
+<li>Logging / IoT</li>
 <li>Automated backups</li>
 <li>ML deployment</li>
 <li>Media conversion</li>  
